@@ -1,0 +1,203 @@
+{
+  "source_label": "kunpeng_blas",
+  "source_directory": "/home/workspace/Yhaibiao/KunPeng_BLAS",
+  "captured_utc": "2026-10-22T08:50:39Z",
+  "dependencies": [
+    {
+      "path": "BLAS-Tester",
+      "remote": "https://github.com/XIAO1HAI/BLAS-Tester.git",
+      "commit": "8e1f62468ef377c4621dc9dee49f3a4b17134652",
+      "additional_files": [],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/BLAS-Tester/LICENSE"
+      ]
+    },
+    {
+      "path": "BLAS_Openlib/LibShalom",
+      "remote": "https://gitee.com/xiao--hai/LibShalom.git",
+      "commit": "9b16391d68370cca3dde53dcb687576336ecfc64",
+      "patch": "dependencies/kunpeng_blas/patches/BLAS_Openlib__LibShalom.patch",
+      "additional_files": [
+        "BLAS_Openlib/LibShalom/benchmark/CP2K_kernels/LibShalom_dgemm.txt",
+        "BLAS_Openlib/LibShalom/benchmark/small_SGEMM/LibShalom_dgemm_self.c",
+        "BLAS_Openlib/LibShalom/benchmark/small_SGEMM/LibShalom_sgemm.txt"
+      ],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/BLAS_Openlib__LibShalom/LICENSE"
+      ]
+    },
+    {
+      "path": "BLAS_Openlib/OpenBLAS",
+      "remote": "https://gitee.com/xiao--hai/OpenBLAS.git",
+      "commit": "aef36a3ff00842b09c0ef706c97d8fda10ef9584",
+      "additional_files": [],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/BLAS_Openlib__OpenBLAS/LICENSE"
+      ]
+    },
+    {
+      "path": "BLAS_Openlib/blasfeo",
+      "remote": "https://gitee.com/xiao--hai/blasfeo.git",
+      "commit": "4e0d2f317174aae8fdc15059fe404fc9155bd5f3",
+      "additional_files": [],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/BLAS_Openlib__blasfeo/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "BLAS_Openlib/blis",
+      "remote": "https://gitee.com/xiao--hai/blis.git",
+      "commit": "daa6e41ff2a6798bb4b5fa646a35f748bb8b0eae",
+      "additional_files": [],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/BLAS_Openlib__blis/LICENSE"
+      ]
+    },
+    {
+      "path": "BLAS_Openlib/libxsmm",
+      "remote": "https://gitee.com/xiao--hai/libxsmm.git",
+      "commit": "10b7dc82b3c46157e76eb40e4e959555f895b24d",
+      "additional_files": [],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/BLAS_Openlib__libxsmm/LICENSE.md"
+      ]
+    },
+    {
+      "path": "OpenBLAS",
+      "remote": "https://gitee.com/xiao--hai/OpenBLAS.git",
+      "commit": "569d052c7e83326e5af35beccce88b4f1731a3bd",
+      "patch": "dependencies/kunpeng_blas/patches/OpenBLAS.patch",
+      "additional_files": [],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/OpenBLAS/LICENSE"
+      ]
+    },
+    {
+      "path": "test-1023/LibShalom",
+      "remote": "https://gitee.com/xiao--hai/LibShalom.git",
+      "commit": "9b16391d68370cca3dde53dcb687576336ecfc64",
+      "patch": "dependencies/kunpeng_blas/patches/test-1023__LibShalom.patch",
+      "additional_files": [
+        "test-1023/LibShalom/benchmark/CP2K_kernels/LibShalom_dgemm.txt",
+        "test-1023/LibShalom/benchmark/small_SGEMM/LibShalom_dgemm_self.c",
+        "test-1023/LibShalom/benchmark/small_SGEMM/LibShalom_sgemm.txt"
+      ],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/test-1023__LibShalom/LICENSE"
+      ]
+    },
+    {
+      "path": "test-1023/OpenBLAS",
+      "remote": "https://gitee.com/xiao--hai/OpenBLAS.git",
+      "commit": "aef36a3ff00842b09c0ef706c97d8fda10ef9584",
+      "additional_files": [],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/test-1023__OpenBLAS/LICENSE"
+      ]
+    },
+    {
+      "path": "test-1023/autoGEMM",
+      "remote": "https://github.com/wudu98/autoGEMM.git",
+      "commit": "ebef4a6f5d5308836f89477804dc6419dd472619",
+      "additional_files": [],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/test-1023__autoGEMM/LICENSE"
+      ]
+    },
+    {
+      "path": "test-1023/blasfeo",
+      "remote": "https://gitee.com/xiao--hai/blasfeo.git",
+      "commit": "4e0d2f317174aae8fdc15059fe404fc9155bd5f3",
+      "additional_files": [],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/test-1023__blasfeo/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "test-1023/blis",
+      "remote": "https://gitee.com/xiao--hai/blis.git",
+      "commit": "daa6e41ff2a6798bb4b5fa646a35f748bb8b0eae",
+      "additional_files": [],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/test-1023__blis/LICENSE"
+      ]
+    },
+    {
+      "path": "test-1023/libxsmm",
+      "remote": "https://gitee.com/xiao--hai/libxsmm.git",
+      "commit": "10b7dc82b3c46157e76eb40e4e959555f895b24d",
+      "additional_files": [],
+      "license_files": [
+        "dependencies/kunpeng_blas/licenses/test-1023__libxsmm/LICENSE.md"
+      ]
+    },
+    {
+      "path": "HPL/hpl-2.3",
+      "version": "2.3",
+      "source_archive": "hpl-2.3.tar.gz",
+      "source_archive_sha256": "32c5c17d22330e6f2337b681aded51637fb6008d3f0eb7c277b163fadd612830",
+      "overlays": [
+        {
+          "path": "Make.Linux_PII_CBLAS",
+          "baseline_sha256": null
+        },
+        {
+          "path": "bin/Linux_PII_CBLAS/HPL-Benchmark.txt",
+          "baseline_sha256": null
+        },
+        {
+          "path": "bin/Linux_PII_CBLAS/HPL.dat",
+          "baseline_sha256": null
+        }
+      ],
+      "omitted_generated_files": [
+        "HPL/hpl-2.3/src/auxil/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/src/auxil/Linux_PII_CBLAS/lib.grd",
+        "HPL/hpl-2.3/src/blas/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/src/blas/Linux_PII_CBLAS/lib.grd",
+        "HPL/hpl-2.3/src/comm/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/src/comm/Linux_PII_CBLAS/lib.grd",
+        "HPL/hpl-2.3/src/grid/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/src/grid/Linux_PII_CBLAS/lib.grd",
+        "HPL/hpl-2.3/src/panel/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/src/panel/Linux_PII_CBLAS/lib.grd",
+        "HPL/hpl-2.3/src/pauxil/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/src/pauxil/Linux_PII_CBLAS/lib.grd",
+        "HPL/hpl-2.3/src/pfact/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/src/pfact/Linux_PII_CBLAS/lib.grd",
+        "HPL/hpl-2.3/src/pgesv/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/src/pgesv/Linux_PII_CBLAS/lib.grd",
+        "HPL/hpl-2.3/testing/matgen/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/testing/matgen/Linux_PII_CBLAS/lib.grd",
+        "HPL/hpl-2.3/testing/pmatgen/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/testing/pmatgen/Linux_PII_CBLAS/lib.grd",
+        "HPL/hpl-2.3/testing/ptest/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/testing/ptest/Linux_PII_CBLAS/dexe.grd",
+        "HPL/hpl-2.3/testing/ptimer/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/testing/ptimer/Linux_PII_CBLAS/lib.grd",
+        "HPL/hpl-2.3/testing/timer/Linux_PII_CBLAS/Makefile",
+        "HPL/hpl-2.3/testing/timer/Linux_PII_CBLAS/lib.grd"
+      ]
+    }
+  ],
+  "hpl_dependency_archive_comparison": [
+    {
+      "archive": "blas-3.8.0.tgz",
+      "source_files_compared": 302,
+      "changed_source_files": [],
+      "archive_sha256": "55df2a24966c2928d3d2ab4a20e9856d9914b856cf4742ebd4f7a4507c8e44e8"
+    },
+    {
+      "archive": "cblas.tgz",
+      "source_files_compared": 204,
+      "changed_source_files": [],
+      "archive_sha256": "0f6354fd67fabd909baf57ced2ef84e962db58fae126e4f41b21dd4fec60a2a3"
+    },
+    {
+      "archive": "mpich-3.2.1.tar.gz",
+      "source_files_compared": 3986,
+      "changed_source_files": [],
+      "archive_sha256": "5db53bf2edfaa2238eb6a0a5bc3d2c2ccbfbb1badd79b664a1a919d2ce2330f1"
+    }
+  ]
+}

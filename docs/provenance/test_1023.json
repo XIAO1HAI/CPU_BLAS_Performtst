@@ -1,0 +1,266 @@
+[
+  {
+    "destination": "benchmarks/test_1023/Test_blas/1/Makefile",
+    "source": "Test_blas/1/Makefile",
+    "sha256": "7feb7598eaa1813742f746a4e87421060e16899e6a7fa53f577904fa6c1499c1",
+    "bytes": 557
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/1/dgemm_bench.c",
+    "source": "Test_blas/1/dgemm_bench.c",
+    "sha256": "be864214a45bdb50b5a6b8ebe835818ee498f520c8557d817d87396fe732602d",
+    "bytes": 4164
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/1/run_nt.sh",
+    "source": "Test_blas/1/run_nt.sh",
+    "sha256": "faab1b1c28c365d9c1374a212f9e816c61c2726f15bba87768a7847955e2140a",
+    "bytes": 1441
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/armpl/Makefile",
+    "source": "Test_blas/armpl/Makefile",
+    "sha256": "8866b98125799424af98c063ac859ddb868a96c07b91d5a84e961dcd2e237d86",
+    "bytes": 791
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/armpl/armpl_bench_dgemm.c",
+    "source": "Test_blas/armpl/armpl_bench_dgemm.c",
+    "sha256": "659cd439ed3ce4cb55a594d51c6dd54d66e42653ad548e88579a41cae3e03131",
+    "bytes": 3207
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/armpl/run_armpl_bench.sh",
+    "source": "Test_blas/armpl/run_armpl_bench.sh",
+    "sha256": "1da4fcd8bb5316da7878ccb09f9da90a6be95da303c57566befeb098ffc4179d",
+    "bytes": 4237
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/blis/Makefile",
+    "source": "Test_blas/blis/Makefile",
+    "sha256": "dd923257fdfed7d91161716bf0b2bc1b67665737df118e58de2ff4ce85c962b8",
+    "bytes": 727
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/blis/blis_bench_dgemm.c",
+    "source": "Test_blas/blis/blis_bench_dgemm.c",
+    "sha256": "659cd439ed3ce4cb55a594d51c6dd54d66e42653ad548e88579a41cae3e03131",
+    "bytes": 3207
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/blis/run_blis_bench.sh",
+    "source": "Test_blas/blis/run_blis_bench.sh",
+    "sha256": "add58490ddce3a592dd84a9462dfda404d6cc58f217aad47741da143e2bf05d6",
+    "bytes": 4759
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/libxsmm/Makefile",
+    "source": "Test_blas/libxsmm/Makefile",
+    "sha256": "2fbbb59e673c00a3aacbafc47aba04b0edaca65a69664e6a6b16d216e717a98d",
+    "bytes": 340
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/libxsmm/gemm_bench_libxsmm_nt.c",
+    "source": "Test_blas/libxsmm/gemm_bench_libxsmm_nt.c",
+    "sha256": "a9fd6476773b47faac99ea2b4746347ff39b1faf031de72aef6f9e3b6c43f06f",
+    "bytes": 3910
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/libxsmm/run_nt.sh",
+    "source": "Test_blas/libxsmm/run_nt.sh",
+    "sha256": "840d3a634aaa0ea4beb9ad58f3d9b2034355b73d2e145dca23f81e1a38c15878",
+    "bytes": 4489
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/openblas/Makefile",
+    "source": "Test_blas/openblas/Makefile",
+    "sha256": "246ae2a5372d2d017ab57288930ec46913926e1e84d87c2b1734ac3d64b92e7b",
+    "bytes": 1147
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/openblas/dgemm_bench.c",
+    "source": "Test_blas/openblas/dgemm_bench.c",
+    "sha256": "c4feb0679d106e6835b419b18a7fd8d22b07d079cf0fd82a78fbdbe20a9e17dd",
+    "bytes": 4503
+  },
+  {
+    "destination": "benchmarks/test_1023/Test_blas/openblas/run_nt.sh",
+    "source": "Test_blas/openblas/run_nt.sh",
+    "sha256": "3b3b28b388b8aeeb48ebe8171d60675b843f250fdec7058f61f594042f54075c",
+    "bytes": 3286
+  },
+  {
+    "destination": "benchmarks/test_1023/fp64_peak.c",
+    "source": "fp64_peak.c",
+    "sha256": "c9de9017aedd4ac0a2184614acded47e6eff75ad45f04bc959ffedb5ca368b8a",
+    "bytes": 2504
+  },
+  {
+    "destination": "benchmarks/test_1023/fp64_peak_sve.c",
+    "source": "fp64_peak_sve.c",
+    "sha256": "14b7b7b2b93c9641b7ccecdbb0035ec6a4d9bf174ed822c6bfca45c3fb0b98ab",
+    "bytes": 2783
+  },
+  {
+    "destination": "data/test_1023/Test_blas/1/results_openblas_NT.csv",
+    "source": "Test_blas/1/results_openblas_NT.csv",
+    "sha256": "d264d39bc16ed4ff6430de2a1c54837cdb9d5bf8e5bca8aa2914150898995c8f",
+    "bytes": 247
+  },
+  {
+    "destination": "data/test_1023/Test_blas/armpl/armpl_dgemm_20251112_210900.csv",
+    "source": "Test_blas/armpl/armpl_dgemm_20251112_210900.csv",
+    "sha256": "ecb26ef55970fd2580e7a343ea0d768a3be1bdecd16f27d245cbf744ab93b06e",
+    "bytes": 210
+  },
+  {
+    "destination": "data/test_1023/Test_blas/armpl/armpl_dgemm_20251112_211220.csv",
+    "source": "Test_blas/armpl/armpl_dgemm_20251112_211220.csv",
+    "sha256": "9c2b894e010b0b4f5c48b415d0f597fbed64bbbadc5ffd8d487de2e51161ec89",
+    "bytes": 1230
+  },
+  {
+    "destination": "data/test_1023/Test_blas/armpl/armpl_dgemm_20251112_211430.csv",
+    "source": "Test_blas/armpl/armpl_dgemm_20251112_211430.csv",
+    "sha256": "0e961f742484537ee40c9dcad304c253a2d6923dc4c8d7f500b56b7767a69f3e",
+    "bytes": 2776
+  },
+  {
+    "destination": "data/test_1023/Test_blas/armpl/armpl_dgemm_20251112_211709.csv",
+    "source": "Test_blas/armpl/armpl_dgemm_20251112_211709.csv",
+    "sha256": "fb14832acaf98e26044397321bcfe33730573e922496492a9e1c0078a8542d60",
+    "bytes": 6190
+  },
+  {
+    "destination": "data/test_1023/Test_blas/blis/blis_dgemm_20251112_201101.csv",
+    "source": "Test_blas/blis/blis_dgemm_20251112_201101.csv",
+    "sha256": "c1b0d0b8f1eef621f15eda9795e7101f94a0c0c738f8df93d54df85465ad1a5b",
+    "bytes": 6190
+  },
+  {
+    "destination": "data/test_1023/Test_blas/libxsmm/libxsmm_dgemm_nt_20251111_214648.csv",
+    "source": "Test_blas/libxsmm/libxsmm_dgemm_nt_20251111_214648.csv",
+    "sha256": "7e674fa4dcabb00b041ddd09690497ffcb92669aa0696c98bdba51bc0163a187",
+    "bytes": 922
+  },
+  {
+    "destination": "data/test_1023/Test_blas/libxsmm/libxsmm_dgemm_nt_20251112_100332.csv",
+    "source": "Test_blas/libxsmm/libxsmm_dgemm_nt_20251112_100332.csv",
+    "sha256": "e425d5df263f674f3b95b6570b4ca94f113c665317fe5e1392544dd77cae18f6",
+    "bytes": 1897
+  },
+  {
+    "destination": "data/test_1023/Test_blas/libxsmm/libxsmm_dgemm_nt_20251112_112338.csv",
+    "source": "Test_blas/libxsmm/libxsmm_dgemm_nt_20251112_112338.csv",
+    "sha256": "1f5c88a8db1d91c1a12be6f37e2e9fd4a7b4480048043ad59f77b63e19d068b9",
+    "bytes": 922
+  },
+  {
+    "destination": "data/test_1023/Test_blas/libxsmm/libxsmm_dgemm_nt_20251112_164123.csv",
+    "source": "Test_blas/libxsmm/libxsmm_dgemm_nt_20251112_164123.csv",
+    "sha256": "56711c62bd8849dcee4d00121244649fcc48e2e0a9d63b184ab8a8d9ed9ea25f",
+    "bytes": 260
+  },
+  {
+    "destination": "data/test_1023/Test_blas/libxsmm/libxsmm_dgemm_nt_20251112_170212.csv",
+    "source": "Test_blas/libxsmm/libxsmm_dgemm_nt_20251112_170212.csv",
+    "sha256": "3519b98071994a064cb877bf24737448f80f86649b5566842f508351e0d96bd9",
+    "bytes": 218
+  },
+  {
+    "destination": "data/test_1023/Test_blas/openblas/results_openblas_NT.csv",
+    "source": "Test_blas/openblas/results_openblas_NT.csv",
+    "sha256": "e9e8608f68a885346dc3992fc90e82cc8af4a9b6a7e083833b13331f128bd4aa",
+    "bytes": 1887
+  },
+  {
+    "destination": "dependencies/test_1023/build_config/OpenBLAS/Makefile.conf",
+    "source": "OpenBLAS/Makefile.conf",
+    "sha256": "1567bea4c9a01a7fe61c0fccad2a1d19ffe0a8364503e81a3a5525526f3a1a66",
+    "bytes": 1045
+  },
+  {
+    "destination": "dependencies/test_1023/build_config/OpenBLAS/Makefile.rule",
+    "source": "OpenBLAS/Makefile.rule",
+    "sha256": "077e437c8edbbb11ed43ff345b77c2d9642f9ec6bbde0d7db93624c6f0d516e5",
+    "bytes": 14158
+  },
+  {
+    "destination": "dependencies/test_1023/build_config/OpenBLAS/config.h",
+    "source": "OpenBLAS/config.h",
+    "sha256": "67307a7291242025a27d7b2d20f3f06e42eb12b1386483aab1fcc33974f6bfd2",
+    "bytes": 530
+  },
+  {
+    "destination": "dependencies/test_1023/build_config/blis/config.mk",
+    "source": "blis/config.mk",
+    "sha256": "dd788af2fd66e76cdb63a95ec2870d9041bbb82d2a70321749c079899824a1fb",
+    "bytes": 9155
+  },
+  {
+    "destination": "dependencies/test_1023/licenses/OpenBLAS/LICENSE",
+    "source": "OpenBLAS/LICENSE",
+    "sha256": "190b5a9c8d9723fe958ad33916bd7346d96fab3c5ea90832bb02d854f620fcff",
+    "bytes": 1548
+  },
+  {
+    "destination": "dependencies/test_1023/licenses/blis/LICENSE",
+    "source": "blis/LICENSE",
+    "sha256": "6b54dbb27c2aeba07c72084ea948d3d7ec206758b119eef37a1cc4f958ac694c",
+    "bytes": 2177
+  },
+  {
+    "destination": "dependencies/test_1023/licenses/libxsmm/LICENSE.md",
+    "source": "libxsmm/LICENSE.md",
+    "sha256": "e60bc806cb48bb16fe29f5b03f5e33384f13063aa1c217dad62d983e318fba46",
+    "bytes": 1685
+  },
+  {
+    "destination": "dependencies/test_1023/patches/OpenBLAS.patch",
+    "source": "OpenBLAS (git diff HEAD)",
+    "sha256": "be76b9f80cfa06d302a6277fbe1f2943f38753bca094ddc01d378a198ade0fe5",
+    "bytes": 4157
+  },
+  {
+    "destination": "dependencies/test_1023/patches/blis.patch",
+    "source": "blis (git diff HEAD)",
+    "sha256": "ff627a3612afc7da9c2be08ef5528065074fb0dbb690ff6ed48afddf6798a148",
+    "bytes": 7411
+  },
+  {
+    "destination": "dependencies/test_1023/patches/libxsmm.patch",
+    "source": "libxsmm (git diff HEAD)",
+    "sha256": "e0d77f2a38a7fce751580e92e263895366d1a5bbdc9155ff9913cd84c7302463",
+    "bytes": 38999
+  },
+  {
+    "destination": "dependencies/test_1023/sources.json",
+    "source": "generated dependency provenance",
+    "sha256": "161b87351499d1b30a8405471454e13753938d9e7c52b80d1b96918eb9303a62",
+    "bytes": 1178
+  },
+  {
+    "destination": "docs/environments/test_1023/bash.txt",
+    "source": "bash --version",
+    "sha256": "b169bbe59ac194567dcd5e9cea3d98c74330c921dd5ec7abfa37b6b1c2c46f22",
+    "bytes": 315
+  },
+  {
+    "destination": "docs/environments/test_1023/gcc.txt",
+    "source": "gcc --version",
+    "sha256": "bd4efc6a06d8b67a738e4c952a349e98a3c70009ae0f4923511f2775338e1eb8",
+    "bytes": 219
+  },
+  {
+    "destination": "docs/environments/test_1023/lscpu.txt",
+    "source": "lscpu",
+    "sha256": "7d56e13336d72606a9e357b3b4b9ca8e3b079403fd6e117c8ded5cd6e0058760",
+    "bytes": 2352
+  },
+  {
+    "destination": "docs/environments/test_1023/os-release.txt",
+    "source": "/etc/os-release",
+    "sha256": "9f351952dd64ac0e618aca1e824fb5e2a16deee3f64efced5e710f6bbed39766",
+    "bytes": 136
+  }
+]

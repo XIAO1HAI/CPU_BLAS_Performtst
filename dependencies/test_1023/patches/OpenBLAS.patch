@@ -1,0 +1,117 @@
+diff --git a/benchmark/Make_exe.sh b/benchmark/Make_exe.sh
+old mode 100755
+new mode 100644
+diff --git a/benchmark/plot-filter.sh b/benchmark/plot-filter.sh
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/cgemm.py b/benchmark/scripts/NUMPY/cgemm.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/cgemv.py b/benchmark/scripts/NUMPY/cgemv.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/daxpy.py b/benchmark/scripts/NUMPY/daxpy.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/ddot.py b/benchmark/scripts/NUMPY/ddot.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/deig.py b/benchmark/scripts/NUMPY/deig.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/dgemm.py b/benchmark/scripts/NUMPY/dgemm.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/dgemv.py b/benchmark/scripts/NUMPY/dgemv.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/dgesv.py b/benchmark/scripts/NUMPY/dgesv.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/dsolve.py b/benchmark/scripts/NUMPY/dsolve.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/sdot.py b/benchmark/scripts/NUMPY/sdot.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/sgemm.py b/benchmark/scripts/NUMPY/sgemm.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/sgemv.py b/benchmark/scripts/NUMPY/sgemv.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/zgemm.py b/benchmark/scripts/NUMPY/zgemm.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/NUMPY/zgemv.py b/benchmark/scripts/NUMPY/zgemv.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/OCTAVE/cgemm.m b/benchmark/scripts/OCTAVE/cgemm.m
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/OCTAVE/cgemv.m b/benchmark/scripts/OCTAVE/cgemv.m
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/OCTAVE/deig.m b/benchmark/scripts/OCTAVE/deig.m
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/OCTAVE/dgemm.m b/benchmark/scripts/OCTAVE/dgemm.m
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/OCTAVE/dgemv.m b/benchmark/scripts/OCTAVE/dgemv.m
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/OCTAVE/dsolve.m b/benchmark/scripts/OCTAVE/dsolve.m
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/OCTAVE/sgemm.m b/benchmark/scripts/OCTAVE/sgemm.m
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/OCTAVE/sgemv.m b/benchmark/scripts/OCTAVE/sgemv.m
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/OCTAVE/zgemm.m b/benchmark/scripts/OCTAVE/zgemm.m
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/OCTAVE/zgemv.m b/benchmark/scripts/OCTAVE/zgemv.m
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/R/deig.R b/benchmark/scripts/R/deig.R
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/R/dgemm.R b/benchmark/scripts/R/dgemm.R
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/R/dsolve.R b/benchmark/scripts/R/dsolve.R
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/SCIPY/dsyrk.py b/benchmark/scripts/SCIPY/dsyrk.py
+old mode 100755
+new mode 100644
+diff --git a/benchmark/scripts/SCIPY/ssyrk.py b/benchmark/scripts/SCIPY/ssyrk.py
+old mode 100755
+new mode 100644
+diff --git a/c_check b/c_check
+old mode 100755
+new mode 100644
+diff --git a/exports/check_objs.sh b/exports/check_objs.sh
+old mode 100755
+new mode 100644
+diff --git a/exports/gensymbol b/exports/gensymbol
+old mode 100755
+new mode 100644
+diff --git a/f_check b/f_check
+old mode 100755
+new mode 100644
+diff --git a/interface/create b/interface/create
+old mode 100755
+new mode 100644
+diff --git a/kernel/power/sgemm_ncopy_16_power.c b/kernel/power/sgemm_ncopy_16_power.c
+old mode 100755
+new mode 100644
+diff --git a/kernel/riscv64/generate_kernel.py b/kernel/riscv64/generate_kernel.py
+old mode 100755
+new mode 100644
+diff --git a/lapack-netlib/lapack_testing.py b/lapack-netlib/lapack_testing.py
+old mode 100755
+new mode 100644

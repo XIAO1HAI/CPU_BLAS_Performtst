@@ -1,0 +1,195 @@
+diff --git a/blastest/check-blastest.sh b/blastest/check-blastest.sh
+old mode 100755
+new mode 100644
+diff --git a/blastest/src/fortran/run-f2c.sh b/blastest/src/fortran/run-f2c.sh
+old mode 100755
+new mode 100644
+diff --git a/build/add-copyright.py b/build/add-copyright.py
+old mode 100755
+new mode 100644
+diff --git a/build/bump-version.sh b/build/bump-version.sh
+old mode 100755
+new mode 100644
+diff --git a/build/detect/config/old/auto-detect.sh b/build/detect/config/old/auto-detect.sh
+old mode 100755
+new mode 100644
+diff --git a/build/do-release.sh b/build/do-release.sh
+old mode 100755
+new mode 100644
+diff --git a/build/flatten-headers.py b/build/flatten-headers.py
+old mode 100755
+new mode 100644
+diff --git a/build/flatten-headers.sh b/build/flatten-headers.sh
+old mode 100755
+new mode 100644
+diff --git a/build/gen-libblis-symbols.sh b/build/gen-libblis-symbols.sh
+old mode 100755
+new mode 100644
+diff --git a/build/gen-make-frags/gen-make-frag.sh b/build/gen-make-frags/gen-make-frag.sh
+old mode 100755
+new mode 100644
+diff --git a/build/irun.py b/build/irun.py
+old mode 100755
+new mode 100644
+diff --git a/build/mirror-tree.sh b/build/mirror-tree.sh
+old mode 100755
+new mode 100644
+diff --git a/build/old/flatten-headers-pass.sh b/build/old/flatten-headers-pass.sh
+old mode 100755
+new mode 100644
+diff --git a/build/old/regen-symbols.sh b/build/old/regen-symbols.sh
+old mode 100755
+new mode 100644
+diff --git a/build/recu-sed.sh b/build/recu-sed.sh
+old mode 100755
+new mode 100644
+diff --git a/ci/cxx/cxx-test.sh b/ci/cxx/cxx-test.sh
+old mode 100755
+new mode 100644
+diff --git a/ci/do_level0.sh b/ci/do_level0.sh
+old mode 100755
+new mode 100644
+diff --git a/ci/do_riscv.sh b/ci/do_riscv.sh
+old mode 100755
+new mode 100644
+diff --git a/ci/do_sde.sh b/ci/do_sde.sh
+old mode 100755
+new mode 100644
+diff --git a/ci/do_testsuite.sh b/ci/do_testsuite.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altra/QuickStart/TimeDGEMM.cfile b/config/altra/QuickStart/TimeDGEMM.cfile
+old mode 100755
+new mode 100644
+diff --git a/config/altra/QuickStart/blis_build_altra.sh b/config/altra/QuickStart/blis_build_altra.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altra/QuickStart/blis_build_altra_pthreads.sh b/config/altra/QuickStart/blis_build_altra_pthreads.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altra/QuickStart/blis_build_both_libraries.sh b/config/altra/QuickStart/blis_build_both_libraries.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altra/QuickStart/blis_configure_altra.sh b/config/altra/QuickStart/blis_configure_altra.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altra/QuickStart/blis_configure_altra_pthreads.sh b/config/altra/QuickStart/blis_configure_altra_pthreads.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altra/QuickStart/blis_quick_start_altra.txt b/config/altra/QuickStart/blis_quick_start_altra.txt
+old mode 100755
+new mode 100644
+diff --git a/config/altra/QuickStart/blis_quick_start_uninstall_altra.sh b/config/altra/QuickStart/blis_quick_start_uninstall_altra.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altra/QuickStart/blis_setenv.sh b/config/altra/QuickStart/blis_setenv.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altra/QuickStart/blis_test.sh b/config/altra/QuickStart/blis_test.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altra/QuickStart/blis_unset_par.sh b/config/altra/QuickStart/blis_unset_par.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altramax/QuickStart/TimeDGEMM.cfile b/config/altramax/QuickStart/TimeDGEMM.cfile
+old mode 100755
+new mode 100644
+diff --git a/config/altramax/QuickStart/blis_build_altramax.sh b/config/altramax/QuickStart/blis_build_altramax.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altramax/QuickStart/blis_build_altramax_pthreads.sh b/config/altramax/QuickStart/blis_build_altramax_pthreads.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altramax/QuickStart/blis_build_both_libraries.sh b/config/altramax/QuickStart/blis_build_both_libraries.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altramax/QuickStart/blis_configure_altramax.sh b/config/altramax/QuickStart/blis_configure_altramax.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altramax/QuickStart/blis_configure_altramax_pthreads.sh b/config/altramax/QuickStart/blis_configure_altramax_pthreads.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altramax/QuickStart/blis_quick_start_altramax.txt b/config/altramax/QuickStart/blis_quick_start_altramax.txt
+old mode 100755
+new mode 100644
+diff --git a/config/altramax/QuickStart/blis_quick_start_uninstall_altramax.sh b/config/altramax/QuickStart/blis_quick_start_uninstall_altramax.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altramax/QuickStart/blis_setenv.sh b/config/altramax/QuickStart/blis_setenv.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altramax/QuickStart/blis_test.sh b/config/altramax/QuickStart/blis_test.sh
+old mode 100755
+new mode 100644
+diff --git a/config/altramax/QuickStart/blis_unset_par.sh b/config/altramax/QuickStart/blis_unset_par.sh
+old mode 100755
+new mode 100644
+diff --git a/configure b/configure
+old mode 100755
+new mode 100644
+diff --git a/frame/compat/cblas/integrate-cblas-tarball.sh b/frame/compat/cblas/integrate-cblas-tarball.sh
+old mode 100755
+new mode 100644
+diff --git a/kernels/power7/3/test/bli_gemm_power7_int_8x4.c b/kernels/power7/3/test/bli_gemm_power7_int_8x4.c
+deleted file mode 120000
+index d9be0598..00000000
+--- a/kernels/power7/3/test/bli_gemm_power7_int_8x4.c
++++ /dev/null
+@@ -1 +0,0 @@
+-../bli_gemm_power7_int_8x4.c
+\ No newline at end of file
+diff --git a/kernels/power7/3/test/bli_gemm_power7_int_8x4.c b/kernels/power7/3/test/bli_gemm_power7_int_8x4.c
+new file mode 100644
+index 00000000..f11709f1
+--- /dev/null
++++ b/kernels/power7/3/test/bli_gemm_power7_int_8x4.c
+@@ -0,0 +1,3 @@
++/*
++
++   (C) Copyright IBM Cor
+\ No newline at end of file
+diff --git a/test/1m4m/runme.sh b/test/1m4m/runme.sh
+old mode 100755
+new mode 100644
+diff --git a/test/3/old/runme.sh b/test/3/old/runme.sh
+old mode 100755
+new mode 100644
+diff --git a/test/3/runme.sh b/test/3/runme.sh
+old mode 100755
+new mode 100644
+diff --git a/test/exec_sizes/grab_top_outputs.sh b/test/exec_sizes/grab_top_outputs.sh
+old mode 100755
+new mode 100644
+diff --git a/test/mixeddt/runme.sh b/test/mixeddt/runme.sh
+old mode 100755
+new mode 100644
+diff --git a/test/runme.sh b/test/runme.sh
+old mode 100755
+new mode 100644
+diff --git a/test/studies/skx/runme.sh b/test/studies/skx/runme.sh
+old mode 100755
+new mode 100644
+diff --git a/test/studies/thunderx2/runme.sh b/test/studies/thunderx2/runme.sh
+old mode 100755
+new mode 100644
+diff --git a/test/sup/old/supmt/runme.sh b/test/sup/old/supmt/runme.sh
+old mode 100755
+new mode 100644
+diff --git a/test/sup/old/supst/runme.sh b/test/sup/old/supst/runme.sh
+old mode 100755
+new mode 100644
+diff --git a/test/sup/runme.sh b/test/sup/runme.sh
+old mode 100755
+new mode 100644
+diff --git a/testsuite/check-blistest.sh b/testsuite/check-blistest.sh
+old mode 100755
+new mode 100644
+diff --git a/testsuite/old/jobscripts/cfig.sh b/testsuite/old/jobscripts/cfig.sh
+old mode 100755
+new mode 100644
+diff --git a/testsuite/old/jobscripts/mk.sh b/testsuite/old/jobscripts/mk.sh
+old mode 100755
+new mode 100644
+diff --git a/testsuite/old/jobscripts/runtest.sh b/testsuite/old/jobscripts/runtest.sh
+old mode 100755
+new mode 100644

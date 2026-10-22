@@ -1,0 +1,72 @@
+[
+  {
+    "destination": "exp_result/k1920_block1_3platform.png",
+    "source": "exp_result/k1920_block1_3platform.png",
+    "sha256": "46ad90cd5789caf12201b8b455a4f23d9a7ea2453fdcdea4e773b72d0a999bd0",
+    "bytes": 372078,
+    "dimensions": [
+      7140,
+      3444
+    ]
+  },
+  {
+    "destination": "exp_result/k1920_block2_3platform.png",
+    "source": "exp_result/k1920_block2_3platform.png",
+    "sha256": "598cc1780177f7017abb85351114b00bbdd6e163bbcbe34cafc4954a9767c8f6",
+    "bytes": 347759,
+    "dimensions": [
+      7140,
+      3444
+    ]
+  },
+  {
+    "destination": "exp_result/k1920_block3_3platform.png",
+    "source": "exp_result/k1920_block3_3platform.png",
+    "sha256": "fbf220893538b5d9cadba0d2f38caf4a2508fd927347d72025b173d950acd3d5",
+    "bytes": 350167,
+    "dimensions": [
+      7140,
+      3444
+    ]
+  },
+  {
+    "destination": "exp_result/bar_chart_24ids_3platform.png",
+    "source": "exp_result/bar_chart_24ids_3platform.png",
+    "sha256": "56bca972ae5ea4cd50edaad4f12178360df0795442e5447cc5e2cb45712d5ed1",
+    "bytes": 202425,
+    "dimensions": [
+      7139,
+      2263
+    ]
+  },
+  {
+    "destination": "exp_result/peak_compare_all.png",
+    "source": "exp_result/peak_compare_all.png",
+    "sha256": "bf6dde7bbb2345817a56e06c70731c9d4175b30a4858ee7a88b186fcd98f1481",
+    "bytes": 161741,
+    "dimensions": [
+      3600,
+      2400
+    ]
+  },
+  {
+    "destination": "exp_result/micro-kernel-heatmap1.png",
+    "source": "exp_result/micro-kernel-heatmap1.png",
+    "sha256": "574200e08a85847763de9071784ed076ced111cda612846d23ce2e58fa75b759",
+    "bytes": 242829,
+    "dimensions": [
+      2048,
+      1170
+    ]
+  },
+  {
+    "destination": "exp_result/micro-kernel-heatmap2.png",
+    "source": "exp_result/micro-kernel-heatmap2.png",
+    "sha256": "7c93332b36af46887dbaee2ef9b28dfe7e57c06c0a9b50fc6e5134b5a1134951",
+    "bytes": 271312,
+    "dimensions": [
+      2048,
+      1132
+    ]
+  }
+]

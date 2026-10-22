@@ -1,0 +1,158 @@
+diff --git a/benchmark/CP2K_kernels/LibShalom_dgemm.c b/benchmark/CP2K_kernels/LibShalom_dgemm.c
+index 3c44c98..828f992 100644
+--- a/benchmark/CP2K_kernels/LibShalom_dgemm.c
++++ b/benchmark/CP2K_kernels/LibShalom_dgemm.c
+@@ -71,8 +71,8 @@ int main()
+ 
+ 	FILE *fp;
+ 
+-	long Me[5]={5,13,13,23,26}, 
+-		Ne[5]={5,5,13,23,26}, 
++	long Me[5]={5,13,13,23,26},
++		Ne[5]={5,5,13,23,26},
+ 		Ke[5]={5,13,13,23,13};
+ 
+   	if( (fp=fopen("LibShalom_dgemm.txt","w")) == NULL )
+@@ -83,12 +83,13 @@ int main()
+ 
+ 
+   	printf("LibShalom: \n");
+-    for( j = 0; j < 5; j++)
+-    {
++    // for( j = 0; j < 5; j++)
++    // {
+ 
+-        M = Me[j];
+-        N = Ne[j];
+-        K = Ke[j];
++        // M = Me[j];
++        // N = Ne[j];
++        // K = Ke[j];
++        M = N = K = 384;
+     	double ops = M *N *K * 1.0e-09 * 2;
+     	fprintf(fp, "%d %d %d", M,N,K);
+ 
+@@ -104,10 +105,10 @@ int main()
+ 			start = dclock();
+ 			for( i= 0; i< loop ;i++)
+ 				LibShalom_dgemm(NoTrans, NoTrans, C, A, B, M, N, K);
+-			cost =(dclock()-start)/loop; 
++			cost =(dclock()-start)/loop;
+ 
+ 			ops = M * N  * K * 1.0e-09 * 2;
+-			printf(" M= %d N=%d K=%d Gflops = %lf \n", M, N, K, 
++			printf(" M= %d N=%d K=%d Gflops = %lf \n", M, N, K,
+ 					ops/cost);
+ 			fprintf(fp, " %.3f", ops/cost);
+ 
+@@ -117,7 +118,7 @@ int main()
+ 		}
+ 
+ 		fprintf(fp, "\n");
+-	}
++	// }
+ 
+ 	fclose(fp);
+     return 0;
+diff --git a/benchmark/CP2K_kernels/Makefile b/benchmark/CP2K_kernels/Makefile
+index d8acf7e..b768b8d 100644
+--- a/benchmark/CP2K_kernels/Makefile
++++ b/benchmark/CP2K_kernels/Makefile
+@@ -1,13 +1,14 @@
+ objects= LibShalom_dgemm.o test_temp_L1.o test_temp.o NN_SMM.o test_SMM_NT.o SMM_thread.o SMM_NT_thread.o DGEMM_NN.o
++LibShalom_LIB    = $(LibShalom_PREFIX)/SMM/lib/libsmm.a
+ 
+ main: $(objects)
+-	g++ $(objects) -O3 -fopenmp  -o main
++	g++ $(objects)  $(LibShalom_LIB) -O3 -fopenmp  -o main
+ 
+ LibShalom_dgemm.o:LibShalom_dgemm.c
+ 	g++ -c -O3 LibShalom_dgemm.c -o LibShalom_dgemm.o
+ test_temp_L1.o:../../NN_LIB/test_temp_L1.c
+ 	g++ -c -O3 ../../NN_LIB/test_temp_L1.c -o test_temp_L1.o
+-test_temp.o:../../NN_LIB/test_temp.c 
++test_temp.o:../../NN_LIB/test_temp.c
+ 	g++ -c -O3 ../../NN_LIB/test_temp.c -o test_temp.o
+ NN_SMM.o:../../NN_LIB/NN_SMM.c
+ 	g++ -c -O3 ../../NN_LIB/NN_SMM.c -o NN_SMM.o
+@@ -16,7 +17,7 @@ test_SMM_NT.o:../../NN_LIB/test_SMM_NT.c
+ SMM_thread.o:../../NN_LIB/SMM_thread.c
+ 	g++ -c  -O3 -fopenmp ../../NN_LIB/SMM_thread.c -o SMM_thread.o
+ SMM_NT_thread.o:../../NN_LIB/SMM_NT_thread.c
+-	g++ -c -O3 -fopenmp ../../NN_LIB/SMM_NT_thread.c -o SMM_NT_thread.o 
++	g++ -c -O3 -fopenmp ../../NN_LIB/SMM_NT_thread.c -o SMM_NT_thread.o
+ DGEMM_NN.o:../../NN_LIB/DGEMM_NN.c
+ 	g++ -c -O3 ../../NN_LIB/DGEMM_NN.c -o DGEMM_NN.o
+ 
+diff --git a/benchmark/small_SGEMM/LibShalom_sgemm.c b/benchmark/small_SGEMM/LibShalom_sgemm.c
+index 59b9880..6933a70 100644
+--- a/benchmark/small_SGEMM/LibShalom_sgemm.c
++++ b/benchmark/small_SGEMM/LibShalom_sgemm.c
+@@ -79,7 +79,7 @@ int main()
+     	exit(0);
+   	}
+ 
+-  	printf("LibShalom:\n"); 
++  	printf("LibShalom:\n");
+     for( j =8; j < 129; j = j + 8)
+     {
+ 
+@@ -100,15 +100,15 @@ int main()
+ //	    	transpose(K, N, B);
+ 
+ 		    for( i =0 ;i< 1; i++)
+-		    	LibShalom_sgemm(NoTrans, NoTrans, C, A, B, M, N, K);
++		    	LibShalom_sgemm(NoTrans, Trans, C, A, B, M, N, K);
+ 
+ 			start = dclock();
+ 			for( i= 0; i< loop ;i++)
+-				LibShalom_sgemm(NoTrans, NoTrans, C, A, B, M, N, K);
+-			cost =(dclock()-start)/loop; 
++				LibShalom_sgemm(NoTrans, Trans, C, A, B, M, N, K);
++			cost =(dclock()-start)/loop;
+ 
+ 			ops = M * N  * K * 1.0e-09 * 2;
+-			printf(" M= %d N=%d K=%d Gflops = %lf\n", M, N, K, 
++			printf(" M= %d N=%d K=%d Gflops = %lf\n", M, N, K,
+ 					ops/cost);
+ 			fprintf(fp, " %.3f", ops/cost);
+ 
+@@ -119,6 +119,8 @@ int main()
+ 
+ 		fprintf(fp, "\n");
+ 	}
++    printf("___________________Trans_______________\n");
++
+ 
+ 	fclose(fp);
+     return 0;
+diff --git a/benchmark/small_SGEMM/Makefile b/benchmark/small_SGEMM/Makefile
+index a064cec..059ffcd 100644
+--- a/benchmark/small_SGEMM/Makefile
++++ b/benchmark/small_SGEMM/Makefile
+@@ -1,13 +1,14 @@
+ objects= LibShalom_sgemm.o test_temp_L1.o test_temp.o NN_SMM.o test_SMM_NT.o SMM_thread.o SMM_NT_thread.o DGEMM_NN.o
++LibShalom_LIB    = $(LibShalom_PREFIX)/SMM/lib/libsmm.a
+ 
+ main: $(objects)
+-	g++ $(objects) -O2 -fopenmp  -o main
++	g++ $(objects) $(LibShalom_LIB) -O2 -fopenmp  -o main
+ 
+ LibShalom_sgemm.o:LibShalom_sgemm.c
+ 	g++ -c -O3 LibShalom_sgemm.c -o LibShalom_sgemm.o
+ test_temp_L1.o:../../NN_LIB/test_temp_L1.c
+ 	g++ -c -O3 ../../NN_LIB/test_temp_L1.c -o test_temp_L1.o
+-test_temp.o:../../NN_LIB/test_temp.c 
++test_temp.o:../../NN_LIB/test_temp.c
+ 	g++ -c -O3 ../../NN_LIB/test_temp.c -o test_temp.o
+ NN_SMM.o:../../NN_LIB/NN_SMM.c
+ 	g++ -c -O3 ../../NN_LIB/NN_SMM.c -o NN_SMM.o
+@@ -16,7 +17,7 @@ test_SMM_NT.o:../../NN_LIB/test_SMM_NT.c
+ SMM_thread.o:../../NN_LIB/SMM_thread.c
+ 	g++ -c  -O3 -fopenmp ../../NN_LIB/SMM_thread.c -o SMM_thread.o
+ SMM_NT_thread.o:../../NN_LIB/SMM_NT_thread.c
+-	g++ -c -O3 -fopenmp ../../NN_LIB/SMM_NT_thread.c -o SMM_NT_thread.o 
++	g++ -c -O3 -fopenmp ../../NN_LIB/SMM_NT_thread.c -o SMM_NT_thread.o
+ DGEMM_NN.o:../../NN_LIB/DGEMM_NN.c
+ 	g++ -c -O3 ../../NN_LIB/DGEMM_NN.c -o DGEMM_NN.o
+ 

@@ -1,0 +1,20 @@
+[
+  {
+    "archive": "blas-3.8.0.tgz",
+    "source_files_compared": 302,
+    "changed_source_files": [],
+    "archive_sha256": "55df2a24966c2928d3d2ab4a20e9856d9914b856cf4742ebd4f7a4507c8e44e8"
+  },
+  {
+    "archive": "cblas.tgz",
+    "source_files_compared": 204,
+    "changed_source_files": [],
+    "archive_sha256": "0f6354fd67fabd909baf57ced2ef84e962db58fae126e4f41b21dd4fec60a2a3"
+  },
+  {
+    "archive": "mpich-3.2.1.tar.gz",
+    "source_files_compared": 3986,
+    "changed_source_files": [],
+    "archive_sha256": "5db53bf2edfaa2238eb6a0a5bc3d2c2ccbfbb1badd79b664a1a919d2ce2330f1"
+  }
+]
