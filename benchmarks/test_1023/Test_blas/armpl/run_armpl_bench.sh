@@ -21,7 +21,7 @@ THREADS=(36)
 
 # ==== 关键 OpenMP 环境变量 ====
 export OMP_NUM_THREADS=36   # 被每轮覆盖
-export OMP_DYNAMIC=0       # **禁用动态线程**，防止自动降到 1
+export OMP_DYNAMIC=false       # **禁用动态线程**，防止自动降到 1
 export OMP_PROC_BIND=close
 export OMP_PLACES=cores
 
@@ -30,7 +30,7 @@ export OMP_PLACES=cores
 
 # 可选：NUMA 绑定
 # NUMA_PREFIX="numactl --cpunodebind=0 --membind=0"
-NUMA_PREFIX=""
+NUMA_PREFIX="${NUMA_PREFIX:-}"
 
 # ==== 形状 ====
 # SHAPES=(
@@ -176,8 +176,13 @@ for shape in "${SHAPES[@]}"; do
   for th in "${THREADS[@]}"; do
     export OMP_NUM_THREADS="$th"
     # 若需要，可用 taskset 固定核心： taskset -c 0-$((th-1)) ...
-    line=$($NUMA_PREFIX "$BIN" "$M" "$N" "$K" "$WARMUP" "$REPEAT")
-    echo "$line" | tee -a "$OUT"
+    if [[ -n "$NUMA_PREFIX" ]]; then
+      read -r -a RUNNER <<< "$NUMA_PREFIX"
+      line=$("${RUNNER[@]}" "$BIN" "$M" "$N" "$K" "$WARMUP" "$REPEAT")
+    else
+      line=$("$BIN" "$M" "$N" "$K" "$WARMUP" "$REPEAT")
+    fi
+    echo "$line" | awk 'NF && $0 !~ /^#/' | tee -a "$OUT"
   done
 done
 

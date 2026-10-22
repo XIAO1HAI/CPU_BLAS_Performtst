@@ -1,0 +1,273 @@
+{
+  "source_label": "kunpeng_blas",
+  "threads": 2,
+  "checks": [
+    {
+      "name": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/armpl/dgemm_bench.c",
+      "source": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/armpl/dgemm_bench.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "m=32 n=48 k=16 layout=row transA=N transB=T time=0.000005 s  GFLOP/s=9.93",
+      "stderr": "",
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/dgemm_bench.c",
+      "source": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/dgemm_bench.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "m=32 n=48 k=16 layout=row transA=N transB=T time=0.000007 s  GFLOP/s=7.20",
+      "stderr": "",
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/dgemm_bench_cblas.c",
+      "source": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/dgemm_bench_cblas.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "m=32 n=48 k=16 layout=row transA=N transB=T time=0.000007 s  GFLOP/s=7.34",
+      "stderr": "",
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "benchmarks/kunpeng_blas/test-1023/Test_blas/armpl/dgemm_bench.c",
+      "source": "benchmarks/kunpeng_blas/test-1023/Test_blas/armpl/dgemm_bench.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "m=32 n=48 k=16 layout=row transA=N transB=T time=0.000005 s  GFLOP/s=10.22",
+      "stderr": "",
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "benchmarks/kunpeng_blas/test-1023/Test_blas/dgemm_bench.c",
+      "source": "benchmarks/kunpeng_blas/test-1023/Test_blas/dgemm_bench.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "m=32 n=48 k=16 layout=row transA=N transB=T time=0.000007 s  GFLOP/s=7.17",
+      "stderr": "",
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "benchmarks/kunpeng_blas/test-1023/Test_blas/dgemm_bench_cblas.c",
+      "source": "benchmarks/kunpeng_blas/test-1023/Test_blas/dgemm_bench_cblas.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "m=32 n=48 k=16 layout=row transA=N transB=T time=0.000007 s  GFLOP/s=7.01",
+      "stderr": "",
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "BLAS_Openlib_blis",
+      "source": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/dgemm_bench.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "m=32 n=48 k=16 layout=row transA=N transB=T time=0.000012 s  GFLOP/s=4.06",
+      "stderr": "",
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "test-1023_blis",
+      "source": "benchmarks/kunpeng_blas/test-1023/Test_blas/dgemm_bench.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "m=32 n=48 k=16 layout=row transA=N transB=T time=0.000013 s  GFLOP/s=3.88",
+      "stderr": "",
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "blis_positional",
+      "source": "benchmarks/kunpeng_blas/test-1023/Test_blas/blis/dgemm_nt_bench_blis.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "BLIS DGEMM NT  M=17 N=19 K=13  thr=2  time=0.000010 s  GFLOPS=0.88",
+      "stderr": ""
+    },
+    {
+      "name": "shalom",
+      "source": "benchmarks/kunpeng_blas/test-1023/Test_blas/shalom/dgemm_bench_shalom.c",
+      "compiler": "g++",
+      "compile_returncode": 0,
+      "compiler_output": "cc1plus: warning: \u2018-Werror=\u2019 argument \u2018-Werror=implicit-function-declaration\u2019 is not valid for C++",
+      "run_returncode": 0,
+      "stdout": "m=32 n=48 k=16 transA=N transB=N threads=2 time=0.000006095 s GFLOP/s=8.06\nMax |C-Cref| = 2.220e-16",
+      "stderr": "",
+      "reference_check_passed": true,
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "shalom_edges",
+      "source": "benchmarks/kunpeng_blas/test-1023/Test_blas/shalom/dgemm_bench_shalom.c",
+      "compiler": "g++",
+      "compile_returncode": 0,
+      "compiler_output": "cc1plus: warning: \u2018-Werror=\u2019 argument \u2018-Werror=implicit-function-declaration\u2019 is not valid for C++",
+      "run_returncode": 0,
+      "stdout": "m=17 n=23 k=13 transA=N transB=N threads=2 time=0.000002430 s GFLOP/s=4.18\nMax |C-Cref| = 5.551e-17",
+      "stderr": "",
+      "reference_check_passed": true
+    },
+    {
+      "name": "shalom_tiny",
+      "source": "benchmarks/kunpeng_blas/test-1023/Test_blas/shalom/dgemm_bench_shalom.c",
+      "compiler": "g++",
+      "compile_returncode": 0,
+      "compiler_output": "cc1plus: warning: \u2018-Werror=\u2019 argument \u2018-Werror=implicit-function-declaration\u2019 is not valid for C++",
+      "run_returncode": 0,
+      "stdout": "m=3 n=5 k=1 transA=N transB=N threads=2 time=0.000000110 s GFLOP/s=0.27\nMax |C-Cref| = 0.000e+00",
+      "stderr": "",
+      "reference_check_passed": true
+    },
+    {
+      "name": "shalom_original",
+      "source": "benchmarks/kunpeng_blas/test-1023/Test_blas/shalom/dgemm_bench_shalom.c",
+      "compiler": "g++",
+      "compile_returncode": 0,
+      "compiler_output": "cc1plus: warning: \u2018-Werror=\u2019 argument \u2018-Werror=implicit-function-declaration\u2019 is not valid for C++",
+      "run_returncode": 0,
+      "stdout": "m=384 n=384 k=384 transA=N transB=N threads=2 time=0.016236850 s GFLOP/s=6.97\nMax |C-Cref| = 1.887e-15",
+      "stderr": "",
+      "reference_check_passed": true
+    },
+    {
+      "name": "blasfeo",
+      "source": "benchmarks/kunpeng_blas/test-1023/Test_blas/blasfeo/bench_blasfeo_dgemm_nt.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "BLASFEO dgemm NT | M=17 N=23 K=13 | threads=2 | ns=7 | time=0.000021 s | 0.48 GFLOPS | checksum=-1.119366e-01",
+      "stderr": "",
+      "reference_checksum": -0.11193660537503967,
+      "reference_check_passed": true
+    },
+    {
+      "name": "first_neon",
+      "source": "benchmarks/kunpeng_blas/test-1023/Test_blas/fp64_peak.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "FP64 peak synthetic: threads=2, iters=100000, time=0.001 s, GFLOPS=20.6 (sink=6.4e+06)",
+      "stderr": "",
+      "assembly_fmla_instructions": 16,
+      "two_threads_reported": true
+    },
+    {
+      "name": "make benchmarks/kunpeng_blas/test-1023/Test_blas",
+      "compile_returncode": 0,
+      "compiler_output": "make: Warning: File 'Makefile' has modification time 597 s in the future\nmake: warning:  Clock skew detected.  Your build may be incomplete."
+    },
+    {
+      "name": "make benchmarks/kunpeng_blas/test-1023/Test_blas/blis",
+      "compile_returncode": 0,
+      "compiler_output": "make: Warning: File 'Makefile' has modification time 596 s in the future\nmake: warning:  Clock skew detected.  Your build may be incomplete."
+    },
+    {
+      "name": "make benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/libxsmm",
+      "compile_returncode": 0,
+      "compiler_output": "make: Warning: File '../../../../test_1023/Test_blas/libxsmm/Makefile' has modification time 596 s in the future\nmake: warning:  Clock skew detected.  Your build may be incomplete."
+    },
+    {
+      "name": "make benchmarks/kunpeng_blas/test-1023/Test_blas/blasfeo",
+      "compile_returncode": 0,
+      "compiler_output": "make: Warning: File 'Makefile' has modification time 596 s in the future\nmake: warning:  Clock skew detected.  Your build may be incomplete."
+    },
+    {
+      "name": "armpl_dedicated",
+      "source": "benchmarks/test_1023/Test_blas/armpl/armpl_bench_dgemm.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "32,48,16,2,dgemm,0.000009,5.513",
+      "stderr": "# omp_get_max_threads=2, OMP_NUM_THREADS=2",
+      "validation_phase": "dedicated backend check"
+    }
+  ]
+}

@@ -21,43 +21,57 @@
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/Makefile",
     "source": "BLAS_Openlib/Test_blas/Makefile",
     "sha256": "99046dbf95abf4bafc8bda22dc0556ab3cf56271c0a09f94f89d3b25a8cec9bf",
-    "bytes": 1113
+    "bytes": 1113,
+    "maintained_sha256": "c4ab9c5d997378481e0de55598d115badeeba0948caa864adabf438dbd5ce265",
+    "maintained_bytes": 1258
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/armpl/Makefile",
     "source": "BLAS_Openlib/Test_blas/armpl/Makefile",
     "sha256": "b18e3582151f5d46ed00721b37b3e954068e0e50e2e885a11b2aefe898c24503",
-    "bytes": 1107
+    "bytes": 1107,
+    "maintained_sha256": "5b28c2b93b2fa6771acf3dbfc3f27cda7fdc6c15aeaba9b518d28ff0e7926278",
+    "maintained_bytes": 1173
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/armpl/dgemm_bench.c",
     "source": "BLAS_Openlib/Test_blas/armpl/dgemm_bench.c",
     "sha256": "c919e4e47d3d7d2ac5c715975b061412469642789d491990287d9e0dbcb74745",
-    "bytes": 4418
+    "bytes": 4418,
+    "maintained_sha256": "b9b85a183ffc90144094b9882b2cd47cb88c27d7d391136dd8196091afaa6193",
+    "maintained_bytes": 4981
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/armpl/env.sh",
     "source": "BLAS_Openlib/Test_blas/armpl/env.sh",
     "sha256": "358c8c201bfabaf2fa0f3c9bd03e2f5d7a7c9b1599a572cb67424cb6e75228e1",
-    "bytes": 267
+    "bytes": 267,
+    "maintained_sha256": "4b1c4998ac7fae7a2597b788f8011da413d48abfe3de9d05a49c98e354bc153e",
+    "maintained_bytes": 273
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/armpl/run_nt.sh",
     "source": "BLAS_Openlib/Test_blas/armpl/run_nt.sh",
     "sha256": "5077255fc681ba5c27dd0ddddd7175c79e4b752eb5708d1ad76bd261ebfc31ac",
-    "bytes": 1917
+    "bytes": 1917,
+    "maintained_sha256": "8fff849a28d22f2a90f2b2246175e756e0f94a1b96f210966b441c24b686db64",
+    "maintained_bytes": 2279
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/blasfeo/Makefile",
     "source": "BLAS_Openlib/Test_blas/blasfeo/Makefile",
     "sha256": "17bdc065a5696cf3c99c013ddbb5e54f97cf37e28d1cfbff10fd0425c33ae54f",
-    "bytes": 440
+    "bytes": 440,
+    "maintained_sha256": "b1ec9be40373898356e7b49425676f50c967ed5cbf14a04ce618b720c7dd8b97",
+    "maintained_bytes": 469
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/blasfeo/bench_blasfeo_dgemm_nt.c",
     "source": "BLAS_Openlib/Test_blas/blasfeo/bench_blasfeo_dgemm_nt.c",
     "sha256": "9991f540332dece0120588dfb64105dd6e016cdd6fc8df4cca9ae4513e353e05",
-    "bytes": 7323
+    "bytes": 7323,
+    "maintained_sha256": "f9a5e7fb8a60cd8ff6c65b386f99b15960c517bcc287623842b866efdcdabab3",
+    "maintained_bytes": 7444
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/blasfeo/run_nt.sh",
@@ -69,49 +83,65 @@
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/blis/Makefile",
     "source": "BLAS_Openlib/Test_blas/blis/Makefile",
     "sha256": "4f3ccc133c6dba235a04be5d3d0942797660bcedc6a392825e9d8bb7a798c7b6",
-    "bytes": 908
+    "bytes": 908,
+    "maintained_sha256": "903df379faf15bec4d1aea5a01ea6d7a34a9b80e41d5928f6ad8a627a4135559",
+    "maintained_bytes": 651
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/blis/dgemm_nt_bench_blis.c",
     "source": "BLAS_Openlib/Test_blas/blis/dgemm_nt_bench_blis.c",
     "sha256": "5f03fe970039ce981631770088f49f303877376c5af0ff2ebb1790876253a176",
-    "bytes": 2737
+    "bytes": 2737,
+    "maintained_sha256": "230e3b557e4cfc40578c611bba7573d7b50fb5593c846c7105502265e15bcfe5",
+    "maintained_bytes": 2851
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/blis/run_nt.sh",
     "source": "BLAS_Openlib/Test_blas/blis/run_nt.sh",
     "sha256": "4d6c2e36f0d3d7ded72e34b32cffcbcebc77af81c1caacf708ceaf94dc406847",
-    "bytes": 2112
+    "bytes": 2112,
+    "maintained_sha256": "0e778bef097dfb032aa7195daaa46eaaef0b929c2354727a87d3cae72f0eb2fa",
+    "maintained_bytes": 2477
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/blis/run_nt_blis.sh",
     "source": "BLAS_Openlib/Test_blas/blis/run_nt_blis.sh",
     "sha256": "151cc8b5f8c0485b5aa624bd86ba1e1b0983056ca68b8ed1bf7ecec51ad10a49",
-    "bytes": 1133
+    "bytes": 1133,
+    "maintained_sha256": "b32b1530bef4b5f64e5f3ae061f80751dfa1c95392e0ebd103b0690b593f587d",
+    "maintained_bytes": 1222
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/dgemm_bench.c",
     "source": "BLAS_Openlib/Test_blas/dgemm_bench.c",
     "sha256": "b4dd3662fe56900b17c513affe9df51189e5c2f474abbe4e37a24bc1effe4006",
-    "bytes": 4502
+    "bytes": 4502,
+    "maintained_sha256": "36e440a5a0f894319f82b08489638a0d6c4f55b5e92b11684f45532a41a774a7",
+    "maintained_bytes": 5062
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/dgemm_bench_cblas.c",
     "source": "BLAS_Openlib/Test_blas/dgemm_bench_cblas.c",
     "sha256": "7e26edd9fd1373bb77279a04897762790fec73a17d83f167aed21462d22c08cf",
-    "bytes": 4257
+    "bytes": 4257,
+    "maintained_sha256": "882197a60f7b9045e0b3ff977912537cb342bed7f6fac9617327df9c740d952c",
+    "maintained_bytes": 4817
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/fp64_peak.c",
     "source": "BLAS_Openlib/Test_blas/fp64_peak.c",
     "sha256": "c9de9017aedd4ac0a2184614acded47e6eff75ad45f04bc959ffedb5ca368b8a",
-    "bytes": 2504
+    "bytes": 2504,
+    "maintained_sha256": "ec9bde312e9ccec23fd25f8a98933d67a00e6efb24637ac9860e1376175b2203",
+    "maintained_bytes": 2929
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/libenv.sh",
     "source": "BLAS_Openlib/Test_blas/libenv.sh",
     "sha256": "b58f44811fe3b42d62bacb773de1548b95831eaf3e042cfc7e135b4b5eb08851",
-    "bytes": 954
+    "bytes": 954,
+    "maintained_sha256": "21302fa1c8fc532681e27cb77d226c25cf6671e8113ff46765d76fa32bd17b3c",
+    "maintained_bytes": 725
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/libxsmm/run_nt.sh",
@@ -123,25 +153,33 @@
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/run_nt.sh",
     "source": "BLAS_Openlib/Test_blas/run_nt.sh",
     "sha256": "c16843ae2e5f22fb9d13ffe377d29d52e1d154a698038ce20d12ea6e41dd2f33",
-    "bytes": 3525
+    "bytes": 3525,
+    "maintained_sha256": "2b33a9bf242d1f3fe0a84273d788b6944b8d11d798ac2054d6bd7ba6bed06e87",
+    "maintained_bytes": 3890
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/run_nt_all_blas.sh",
     "source": "BLAS_Openlib/Test_blas/run_nt_all_blas.sh",
     "sha256": "123d6c95ee5dbcefa790dcc438210aaa36e078f78f64c2224259d2e8562f5dbc",
-    "bytes": 2242
+    "bytes": 2242,
+    "maintained_sha256": "ffe548a7ca3a8448a4197aabd579fa99a5115ec546860de90d97d262c1a8184e",
+    "maintained_bytes": 2607
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/shalom/Makefile",
     "source": "BLAS_Openlib/Test_blas/shalom/Makefile",
     "sha256": "03daaa0bd97356d3466fec0e7a8bd1db4f4452fc2288df8b9a043cdaffbe8f23",
-    "bytes": 692
+    "bytes": 692,
+    "maintained_sha256": "b241cce9a9f71d8027e1547b6cdce0b6e11441492e3e496dff1230fecb0e18fd",
+    "maintained_bytes": 410
   },
   {
     "destination": "benchmarks/kunpeng_blas/BLAS_Openlib/Test_blas/shalom/dgemm_bench_shalom.c",
     "source": "BLAS_Openlib/Test_blas/shalom/dgemm_bench_shalom.c",
     "sha256": "fa515e9909e1c835c45de749774a13693c4797f7cfc68a597a34f948b22fe91d",
-    "bytes": 3448
+    "bytes": 3448,
+    "maintained_sha256": "1ba69218021639a05430a96852da25ac4f963a5f668c017431ac0f9894000372",
+    "maintained_bytes": 3575
   },
   {
     "destination": "benchmarks/kunpeng_blas/HPL/hpl-2.3/Make.Linux_PII_CBLAS",
@@ -189,43 +227,57 @@
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/Makefile",
     "source": "test-1023/Test_blas/Makefile",
     "sha256": "e040d4d5d3ea58b47383f8e8680a51276053cce3e3f6b6eef65209dd0b8c70b1",
-    "bytes": 1146
+    "bytes": 1146,
+    "maintained_sha256": "eabcfc375fb092a612eeeb93602eb9fc04cebfd1b1457b17196359aa65cb2f06",
+    "maintained_bytes": 1291
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/armpl/Makefile",
     "source": "test-1023/Test_blas/armpl/Makefile",
     "sha256": "78846933e805aa32539b77da968796d400de2826601830a007797bafb48c4d17",
-    "bytes": 1140
+    "bytes": 1140,
+    "maintained_sha256": "07b19b36e0f031a668c7a827f1159e412ba808cd6cd97a95fc8d17381a26d2ba",
+    "maintained_bytes": 1206
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/armpl/dgemm_bench.c",
     "source": "test-1023/Test_blas/armpl/dgemm_bench.c",
     "sha256": "c919e4e47d3d7d2ac5c715975b061412469642789d491990287d9e0dbcb74745",
-    "bytes": 4418
+    "bytes": 4418,
+    "maintained_sha256": "b9b85a183ffc90144094b9882b2cd47cb88c27d7d391136dd8196091afaa6193",
+    "maintained_bytes": 4981
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/armpl/env.sh",
     "source": "test-1023/Test_blas/armpl/env.sh",
     "sha256": "358c8c201bfabaf2fa0f3c9bd03e2f5d7a7c9b1599a572cb67424cb6e75228e1",
-    "bytes": 267
+    "bytes": 267,
+    "maintained_sha256": "4b1c4998ac7fae7a2597b788f8011da413d48abfe3de9d05a49c98e354bc153e",
+    "maintained_bytes": 273
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/armpl/run_nt.sh",
     "source": "test-1023/Test_blas/armpl/run_nt.sh",
     "sha256": "1960711c110c74e6f64c815396e1ff5ec3632fd54241428983e35b2ab7827dc1",
-    "bytes": 1897
+    "bytes": 1897,
+    "maintained_sha256": "4a31fb3bf0411c38772e560eaa04a11534f509abd66a0c397026b32642008d8a",
+    "maintained_bytes": 2259
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/blasfeo/Makefile",
     "source": "test-1023/Test_blas/blasfeo/Makefile",
     "sha256": "17bdc065a5696cf3c99c013ddbb5e54f97cf37e28d1cfbff10fd0425c33ae54f",
-    "bytes": 440
+    "bytes": 440,
+    "maintained_sha256": "b1ec9be40373898356e7b49425676f50c967ed5cbf14a04ce618b720c7dd8b97",
+    "maintained_bytes": 469
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/blasfeo/bench_blasfeo_dgemm_nt.c",
     "source": "test-1023/Test_blas/blasfeo/bench_blasfeo_dgemm_nt.c",
     "sha256": "9991f540332dece0120588dfb64105dd6e016cdd6fc8df4cca9ae4513e353e05",
-    "bytes": 7323
+    "bytes": 7323,
+    "maintained_sha256": "f9a5e7fb8a60cd8ff6c65b386f99b15960c517bcc287623842b866efdcdabab3",
+    "maintained_bytes": 7444
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/blasfeo/run_nt.sh",
@@ -237,73 +289,97 @@
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/blis/Makefile",
     "source": "test-1023/Test_blas/blis/Makefile",
     "sha256": "4f3ccc133c6dba235a04be5d3d0942797660bcedc6a392825e9d8bb7a798c7b6",
-    "bytes": 908
+    "bytes": 908,
+    "maintained_sha256": "903df379faf15bec4d1aea5a01ea6d7a34a9b80e41d5928f6ad8a627a4135559",
+    "maintained_bytes": 651
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/blis/dgemm_nt_bench_blis.c",
     "source": "test-1023/Test_blas/blis/dgemm_nt_bench_blis.c",
     "sha256": "5f03fe970039ce981631770088f49f303877376c5af0ff2ebb1790876253a176",
-    "bytes": 2737
+    "bytes": 2737,
+    "maintained_sha256": "230e3b557e4cfc40578c611bba7573d7b50fb5593c846c7105502265e15bcfe5",
+    "maintained_bytes": 2851
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/blis/run_nt.sh",
     "source": "test-1023/Test_blas/blis/run_nt.sh",
     "sha256": "4d6c2e36f0d3d7ded72e34b32cffcbcebc77af81c1caacf708ceaf94dc406847",
-    "bytes": 2112
+    "bytes": 2112,
+    "maintained_sha256": "0e778bef097dfb032aa7195daaa46eaaef0b929c2354727a87d3cae72f0eb2fa",
+    "maintained_bytes": 2477
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/blis/run_nt_blis.sh",
     "source": "test-1023/Test_blas/blis/run_nt_blis.sh",
     "sha256": "151cc8b5f8c0485b5aa624bd86ba1e1b0983056ca68b8ed1bf7ecec51ad10a49",
-    "bytes": 1133
+    "bytes": 1133,
+    "maintained_sha256": "b32b1530bef4b5f64e5f3ae061f80751dfa1c95392e0ebd103b0690b593f587d",
+    "maintained_bytes": 1222
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/dgemm_bench.c",
     "source": "test-1023/Test_blas/dgemm_bench.c",
     "sha256": "b4dd3662fe56900b17c513affe9df51189e5c2f474abbe4e37a24bc1effe4006",
-    "bytes": 4502
+    "bytes": 4502,
+    "maintained_sha256": "36e440a5a0f894319f82b08489638a0d6c4f55b5e92b11684f45532a41a774a7",
+    "maintained_bytes": 5062
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/dgemm_bench_cblas.c",
     "source": "test-1023/Test_blas/dgemm_bench_cblas.c",
     "sha256": "d595e31a10b1485b2364d7ce77a7800c83763044f80d086c4b590996f770b5a9",
-    "bytes": 4312
+    "bytes": 4312,
+    "maintained_sha256": "a6655b63d272dce92165a92708d650a345c96f947e62d9244091f4963d5282e9",
+    "maintained_bytes": 4872
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/fp64_peak.c",
     "source": "test-1023/Test_blas/fp64_peak.c",
     "sha256": "c9de9017aedd4ac0a2184614acded47e6eff75ad45f04bc959ffedb5ca368b8a",
-    "bytes": 2504
+    "bytes": 2504,
+    "maintained_sha256": "ec9bde312e9ccec23fd25f8a98933d67a00e6efb24637ac9860e1376175b2203",
+    "maintained_bytes": 2929
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/libenv.sh",
     "source": "test-1023/Test_blas/libenv.sh",
     "sha256": "b58f44811fe3b42d62bacb773de1548b95831eaf3e042cfc7e135b4b5eb08851",
-    "bytes": 954
+    "bytes": 954,
+    "maintained_sha256": "21302fa1c8fc532681e27cb77d226c25cf6671e8113ff46765d76fa32bd17b3c",
+    "maintained_bytes": 725
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/run_nt.sh",
     "source": "test-1023/Test_blas/run_nt.sh",
     "sha256": "0edc89c8369c6bdc79709e1ff911409fb435fdc9f061b510f96f50774aed4c21",
-    "bytes": 3445
+    "bytes": 3445,
+    "maintained_sha256": "d4a3e6b91d3a5b057a73639bcea4bc9d06182382f02e18f3da4ac89ab94c74a3",
+    "maintained_bytes": 3810
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/run_nt_all_blas.sh",
     "source": "test-1023/Test_blas/run_nt_all_blas.sh",
     "sha256": "123d6c95ee5dbcefa790dcc438210aaa36e078f78f64c2224259d2e8562f5dbc",
-    "bytes": 2242
+    "bytes": 2242,
+    "maintained_sha256": "ffe548a7ca3a8448a4197aabd579fa99a5115ec546860de90d97d262c1a8184e",
+    "maintained_bytes": 2607
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/shalom/Makefile",
     "source": "test-1023/Test_blas/shalom/Makefile",
     "sha256": "03daaa0bd97356d3466fec0e7a8bd1db4f4452fc2288df8b9a043cdaffbe8f23",
-    "bytes": 692
+    "bytes": 692,
+    "maintained_sha256": "b241cce9a9f71d8027e1547b6cdce0b6e11441492e3e496dff1230fecb0e18fd",
+    "maintained_bytes": 410
   },
   {
     "destination": "benchmarks/kunpeng_blas/test-1023/Test_blas/shalom/dgemm_bench_shalom.c",
     "source": "test-1023/Test_blas/shalom/dgemm_bench_shalom.c",
     "sha256": "fa515e9909e1c835c45de749774a13693c4797f7cfc68a597a34f948b22fe91d",
-    "bytes": 3448
+    "bytes": 3448,
+    "maintained_sha256": "1ba69218021639a05430a96852da25ac4f963a5f668c017431ac0f9894000372",
+    "maintained_bytes": 3575
   },
   {
     "destination": "data/kunpeng_blas/BLAS_Openlib/Test_blas/armpl/results_armpl_NT.csv",
@@ -669,7 +745,9 @@
     "destination": "dependencies/kunpeng_blas/patches/OpenBLAS.patch",
     "source": "OpenBLAS (git diff HEAD)",
     "sha256": "80c9fd327b535552f42b827d0e25b8166e9f55b0ef2720dd6e91f53384c0e321",
-    "bytes": 14380
+    "bytes": 14380,
+    "maintained_sha256": "f011ddb94f53516ce6d32b0e3e53fc815fbdaaf71bc7a33f705879adbc4dd012",
+    "maintained_bytes": 13923
   },
   {
     "destination": "dependencies/kunpeng_blas/patches/test-1023__LibShalom.patch",

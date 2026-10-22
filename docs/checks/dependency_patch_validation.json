@@ -1,0 +1,15 @@
+{
+  "patch_applies": true,
+  "checks": [
+    {
+      "file": "kernel/arm64/sgemm_kernel_4x4.S",
+      "compile_returncode": 0,
+      "compiler_output": ""
+    },
+    {
+      "file": "kernel/generic/gemm_tcopy_4.c",
+      "compile_returncode": 0,
+      "compiler_output": ""
+    }
+  ]
+}

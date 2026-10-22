@@ -1,3 +1,4 @@
+#include "../../../benchmark_args.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,19 +26,19 @@ int main(int argc, char** argv) {
     fprintf(stderr, "Usage: %s M N K REP [VERIFY]\n", argv[0]);
     return 1;
   }
-  const libxsmm_blasint m   = (libxsmm_blasint)atoi(argv[1]);
-  const libxsmm_blasint n   = (libxsmm_blasint)atoi(argv[2]);
-  const libxsmm_blasint k   = (libxsmm_blasint)atoi(argv[3]);
-  const int               rep = atoi(argv[4]);
-  const int            verify = (argc > 5 ? atoi(argv[5]) : 0);
+  const libxsmm_blasint m   = (libxsmm_blasint)bench_int(argv[1], 1);
+  const libxsmm_blasint n   = (libxsmm_blasint)bench_int(argv[2], 1);
+  const libxsmm_blasint k   = (libxsmm_blasint)bench_int(argv[3], 1);
+  const int               rep = bench_int(argv[4], 1);
+  const int            verify = (argc > 5 ? bench_int(argv[5], 0) : 0);
 
   const libxsmm_blasint lda = m;
   const libxsmm_blasint ldb = n;   /* B 为 n x k（列主序）；以 transb='T' 使用 */
   const libxsmm_blasint ldc = m;
 
-  const size_t szA = (size_t)lda * k;
-  const size_t szB = (size_t)ldb * k;
-  const size_t szC = (size_t)ldc * n;
+  const size_t szA = bench_elements(lda, k);
+  const size_t szB = bench_elements(ldb, k);
+  const size_t szC = bench_elements(ldc, n);
 
   double *A = (double*)libxsmm_aligned_malloc(szA * sizeof(double), 64);
   double *B = (double*)libxsmm_aligned_malloc(szB * sizeof(double), 64);
@@ -95,6 +96,7 @@ int main(int argc, char** argv) {
   printf("LIBXSMM dgemm NT  m=%d n=%d k=%d rep=%d  time=%.6f s  GFLOPS=%.2f\n",
          (int)m, (int)n, (int)k, rep, secs, gflops);
 
+  int status = 0;
   if (verify) {
     /* 朴素参考：Cref = A * B^T */
     for (libxsmm_blasint j = 0; j < n; ++j) {
@@ -109,6 +111,7 @@ int main(int argc, char** argv) {
     double maxerr = 0.0;
     for (size_t q = 0; q < szC; ++q) {
       double e = fabs(C[q] - Cref[q]);
+      if (!isfinite(C[q]) || !isfinite(Cref[q]) || e > 1e-10 * (1.0 + fabs(Cref[q]))) status = 3;
       if (e > maxerr) maxerr = e;
     }
     printf("Max |C-Cref| = %.3e\n", maxerr);
@@ -117,6 +120,6 @@ int main(int argc, char** argv) {
   libxsmm_finalize();
   libxsmm_free(A); libxsmm_free(B); libxsmm_free(C);
   if (Cref) libxsmm_free(Cref);
-  return 0;
+  return status;
 }
 

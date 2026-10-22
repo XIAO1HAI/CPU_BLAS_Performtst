@@ -9,7 +9,7 @@ LDLIBS   = -lblasfeo -lm -fopenmp
 .PHONY: all clean
 all: bench_blasfeo_dgemm_nt
 
-bench_blasfeo_dgemm_nt: bench_blasfeo_dgemm_nt.c
+bench_blasfeo_dgemm_nt: bench_blasfeo_dgemm_nt.c ../../../../benchmark_args.h
 	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS) $(LDLIBS)
 
 clean:

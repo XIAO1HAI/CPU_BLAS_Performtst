@@ -1,0 +1,49 @@
+M,N,K,threads,precision,time_sec,GFLOPS
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,83584,384,36,dgemm,0.031446,783.891
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,83200,384,36,dgemm,0.031275,784.549
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,81646,384,36,dgemm,0.030570,787.640
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,79744,384,36,dgemm,0.030313,775.818
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,77824,384,36,dgemm,0.030167,760.817
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,75520,384,36,dgemm,0.029337,759.176
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,73216,384,36,dgemm,0.028731,751.520
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,66304,384,36,dgemm,0.026041,750.878
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,63232,384,36,dgemm,0.024719,754.389
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,60544,384,36,dgemm,0.023244,768.165
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,59008,384,36,dgemm,0.022963,757.831
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,56704,384,36,dgemm,0.022166,754.413
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,50944,384,36,dgemm,0.019921,754.180
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,47872,384,36,dgemm,0.018915,746.385
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,44416,384,36,dgemm,0.017641,742.529
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,43264,384,36,dgemm,0.017450,731.183
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,41344,384,36,dgemm,0.016680,730.968
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,39040,384,36,dgemm,0.016268,707.732
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,34432,384,36,dgemm,0.015005,676.729
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,32512,384,36,dgemm,0.014267,672.035
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,29440,384,36,dgemm,0.013403,647.771
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,27904,384,36,dgemm,0.012561,655.165
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,24064,384,36,dgemm,0.011099,639.434
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+384,22912,384,36,dgemm,0.010746,628.780

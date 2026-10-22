@@ -2,8 +2,8 @@
 set -euo pipefail
 
 # ==== 路径设置 ====
-ARMPL_DIR="${ARMPL_DIR:-/opt/arm/armpl_25.07_gcc}"
-export LD_LIBRARY_PATH="${ARMPL_DIR}/lib:${LD_LIBRARY_PATH:-}"
+BLIS_DIR="${BLIS_DIR:-/usr/local}"
+export LD_LIBRARY_PATH="${BLIS_DIR}/lib:${LD_LIBRARY_PATH:-}"
 
 BIN="./blis_bench_dgemm"
 if [[ ! -x "$BIN" ]]; then
@@ -12,8 +12,8 @@ if [[ ! -x "$BIN" ]]; then
 fi
 
 echo ">> ldd ${BIN}"
-ldd "$BIN" | grep -E 'armpl|gomp|omp' || {
-  echo "!! Warning: not clearly linked to ARMPL OpenMP runtime (armpl/gomp/omp not found in ldd output)"; }
+ldd "$BIN" | grep -E 'blis|gomp|omp' || {
+  echo "!! Warning: not clearly linked to BLIS OpenMP runtime (blis/gomp/omp not found in ldd output)"; }
 
 # ==== 线程数 ====
 # 你要测 36 线程：放在数组里（可追加其他）
@@ -28,11 +28,11 @@ export OMP_PLACES=cores
 
 
 # 可选：GCC libgomp 的绑核（按机器核数调整）——示例前 36 核
-export GOMP_CPU_AFFINITY="0-35"
+# Set GOMP_CPU_AFFINITY explicitly when CPU pinning is required.
 
 # 可选：NUMA 绑定
 # NUMA_PREFIX="numactl --cpunodebind=0 --membind=0"
-NUMA_PREFIX="0"
+NUMA_PREFIX="${NUMA_PREFIX:-}"
 
 # ==== 形状 ====
 SHAPES=(
@@ -203,8 +203,13 @@ for shape in "${SHAPES[@]}"; do
   for th in "${THREADS[@]}"; do
     export OMP_NUM_THREADS="$th"
     # 若需要，可用 taskset 固定核心： taskset -c 0-$((th-1)) ...
-    line=$($NUMA_PREFIX "$BIN" "$M" "$N" "$K" "$WARMUP" "$REPEAT")
-    echo "$line" | tee -a "$OUT"
+    if [[ -n "$NUMA_PREFIX" ]]; then
+      read -r -a RUNNER <<< "$NUMA_PREFIX"
+      line=$("${RUNNER[@]}" "$BIN" "$M" "$N" "$K" "$WARMUP" "$REPEAT")
+    else
+      line=$("$BIN" "$M" "$N" "$K" "$WARMUP" "$REPEAT")
+    fi
+    echo "$line" | awk 'NF && $0 !~ /^#/' | tee -a "$OUT"
   done
 done
 

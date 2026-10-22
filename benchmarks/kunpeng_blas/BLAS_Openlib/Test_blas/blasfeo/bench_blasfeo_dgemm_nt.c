@@ -1,4 +1,5 @@
 // bench_blasfeo_dgemm_nt.c -- NT path, OpenMP outer parallel, N-sliced, low-peak memory
+#include "../../../../benchmark_args.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -46,16 +47,17 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    const int M      = atoi(argv[1]);
-    const int N      = atoi(argv[2]);
-    const int K      = atoi(argv[3]);
-    const int iters  = atoi(argv[4]);
-    const int warmup = atoi(argv[5]);
-    const int threads = (argc > 6) ? atoi(argv[6]) : omp_get_max_threads();
-    const int ns_user = (argc > 7) ? atoi(argv[7]) : 2048;   // N 方向切片大小（默认 2048）
+    const int M      = bench_int(argv[1], 1);
+    const int N      = bench_int(argv[2], 1);
+    const int K      = bench_int(argv[3], 1);
+    const int iters  = bench_int(argv[4], 1);
+    const int warmup = bench_int(argv[5], 0);
+    const int threads = (argc > 6) ? bench_int(argv[6], 1) : omp_get_max_threads();
+    const int ns_user = (argc > 7) ? bench_int(argv[7], 1) : 2048;   // N 方向切片大小（默认 2048）
 
     if (ns_user <= 0) { fprintf(stderr, "ns_slice must be > 0\n"); return 1; }
 
+    bench_elements(M, K); bench_elements(N, K); bench_elements(M, N);
     omp_set_num_threads(threads);
 
     const double alpha = 1.0, beta = 0.0;
@@ -77,7 +79,7 @@ int main(int argc, char** argv) {
         free(A);
     }
 
-    // ===== 逐片循环：B_slice (K x ns) & C_slice (M x ns) =====
+    // ===== NT panels: B_slice (ns x K), C_slice (M x ns) =====
 
     // 为校验用的一列临时缓冲（O(M)）
     double* col = (double*)xmalloc(sizeof(double) * (size_t)M, "colbuf");
@@ -90,23 +92,23 @@ int main(int argc, char** argv) {
             const int ns = (j0 + ns_user <= N) ? ns_user : (N - j0);
 
             // 为 B_slice/C_slice 显式分配面板缓冲
-            size_t memB = blasfeo_memsize_dmat(K, ns);
+            size_t memB = blasfeo_memsize_dmat(ns, K);
             size_t memC = blasfeo_memsize_dmat(M, ns);
             void* bufB = xmalloc(memB, "sB_slice");
             void* bufC = xmalloc(memC, "sC_slice");
             struct blasfeo_dmat sB, sC;
-            blasfeo_create_dmat(K, ns, &sB, bufB);
+            blasfeo_create_dmat(ns, K, &sB, bufB);
             blasfeo_create_dmat(M, ns, &sC, bufC);
 
-            // pack B_slice：从列主序 B 的 (K x ns) 视图。为 pack 临时分配 B_slice 列主序缓冲
+            // Pack the column-major ns x K panel consumed as B_slice^T.
             {
-                const int ldb = K;
-                size_t bytesB = sizeof(double) * (size_t)ldb * (size_t)ns;
+                const int ldb = ns;
+                size_t bytesB = sizeof(double) * (size_t)ldb * (size_t)K;
                 double* Bsl = (double*)xmalloc(bytesB, "B_slice(colmajor)");
                 // 生成 B 的随机数：为了可复现，用 (j0) 作为种子偏移
                 srand(1 + j0);
-                fill_rand_colmajor(Bsl, K, ns, ldb);
-                blasfeo_pack_dmat(K, ns, Bsl, ldb, &sB, 0, 0);
+                fill_rand_colmajor(Bsl, ns, K, ldb);
+                blasfeo_pack_dmat(ns, K, Bsl, ldb, &sB, 0, 0);
                 free(Bsl);
             }
 
@@ -145,22 +147,22 @@ int main(int argc, char** argv) {
         for (int j0 = 0; j0 < N; j0 += ns_user) {
             const int ns = (j0 + ns_user <= N) ? ns_user : (N - j0);
 
-            size_t memB = blasfeo_memsize_dmat(K, ns);
+            size_t memB = blasfeo_memsize_dmat(ns, K);
             size_t memC = blasfeo_memsize_dmat(M, ns);
             void* bufB = xmalloc(memB, "sB_slice");
             void* bufC = xmalloc(memC, "sC_slice");
             struct blasfeo_dmat sB, sC;
-            blasfeo_create_dmat(K, ns, &sB, bufB);
+            blasfeo_create_dmat(ns, K, &sB, bufB);
             blasfeo_create_dmat(M, ns, &sC, bufC);
 
             // pack 当前 B_slice
             {
-                const int ldb = K;
-                size_t bytesB = sizeof(double) * (size_t)ldb * (size_t)ns;
+                const int ldb = ns;
+                size_t bytesB = sizeof(double) * (size_t)ldb * (size_t)K;
                 double* Bsl = (double*)xmalloc(bytesB, "B_slice(colmajor)");
                 srand(1 + j0);
-                fill_rand_colmajor(Bsl, K, ns, ldb);
-                blasfeo_pack_dmat(K, ns, Bsl, ldb, &sB, 0, 0);
+                fill_rand_colmajor(Bsl, ns, K, ldb);
+                blasfeo_pack_dmat(ns, K, Bsl, ldb, &sB, 0, 0);
                 free(Bsl);
             }
 

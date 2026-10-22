@@ -1,0 +1,58 @@
+[
+  {
+    "destination": "picture/wavefront_m_tail.png",
+    "source": "Normalizing Irregular DGEMM on CPUs via Execution-Layer Mechanisms.pdf",
+    "page": 7,
+    "figure_image_index": 0,
+    "dimensions": [
+      1955,
+      1326
+    ],
+    "sha256": "6b172fd0591a03b61297cc85f2eb441d2d1e5380be5602fb7e8cada38cd36cfd",
+    "bytes": 1725212,
+    "source_pdf_sha256": "32ed3ebc62c4406cf3e59684367e79b16eb815f4f56c8da376cab791236d3f50",
+    "paper_figure": 2
+  },
+  {
+    "destination": "picture/wavefront_n_tail.png",
+    "source": "Normalizing Irregular DGEMM on CPUs via Execution-Layer Mechanisms.pdf",
+    "page": 7,
+    "figure_image_index": 1,
+    "dimensions": [
+      1953,
+      1033
+    ],
+    "sha256": "39b3081c20020d30674b72c228bdbfb2949bab9ebca74d55a748efd0548c6c10",
+    "bytes": 1036699,
+    "source_pdf_sha256": "32ed3ebc62c4406cf3e59684367e79b16eb815f4f56c8da376cab791236d3f50",
+    "paper_figure": 3
+  },
+  {
+    "destination": "picture/channelized_packing.png",
+    "source": "Normalizing Irregular DGEMM on CPUs via Execution-Layer Mechanisms.pdf",
+    "page": 9,
+    "figure_image_index": 0,
+    "dimensions": [
+      1956,
+      806
+    ],
+    "sha256": "95a8e03c0ed297d25d89b6600fac5789147f19f8842ed0e72d7580eaed7ebeda",
+    "bytes": 383025,
+    "source_pdf_sha256": "32ed3ebc62c4406cf3e59684367e79b16eb815f4f56c8da376cab791236d3f50",
+    "paper_figure": 4
+  },
+  {
+    "destination": "picture/offset_bifurcation.png",
+    "source": "Normalizing Irregular DGEMM on CPUs via Execution-Layer Mechanisms.pdf",
+    "page": 11,
+    "figure_image_index": 0,
+    "dimensions": [
+      1001,
+      1075
+    ],
+    "sha256": "99f1dc7b171cba481a19702e97ab0ffb8809395184923d921e4f75664c429ffd",
+    "bytes": 327071,
+    "source_pdf_sha256": "32ed3ebc62c4406cf3e59684367e79b16eb815f4f56c8da376cab791236d3f50",
+    "paper_figure": 6
+  }
+]

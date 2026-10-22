@@ -8,7 +8,8 @@ BLIS_THREAD_IMPL ?= openmp
 
 CC      ?= gcc
 CFLAGS   = -O3 -march=native -ffast-math -I$(BLIS_INC)
-LDFLAGS  = -L$(BLIS_LIB) -lblis -lm
+BLIS_LDLIBS ?= -lblis
+LDFLAGS  = -L$(BLIS_LIB) -Wl,-rpath,$(BLIS_LIB) $(BLIS_LDLIBS) -lm
 
 ifeq ($(BLIS_THREAD_IMPL),openmp)
   CFLAGS  += -fopenmp
@@ -21,7 +22,7 @@ TARGET = blis_bench_dgemm
 
 all: $(TARGET)
 $(TARGET): $(SRC)
-	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
+	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
 
 clean:
 	rm -f $(TARGET) *.o

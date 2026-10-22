@@ -8,9 +8,11 @@
 // 线程控制：通过环境变量（如 OPENBLAS_NUM_THREADS / BLIS_NUM_THREADS / OMP_NUM_THREADS）
 // 亲和性：建议搭配 numactl --cpunodebind=0 --membind=0
 
+#include "../../../benchmark_args.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include <time.h>
 #include <cblas.h>
 
@@ -31,16 +33,17 @@ int main(int argc, char** argv) {
     int repeats = 5, warmup = 1;
     double alpha = 1.0, beta = 0.0;
 
-    CBLAS_LAYOUT layout = CblasRowMajor;
-    CBLAS_TRANSPOSE ta = CblasNoTrans; // N
-    CBLAS_TRANSPOSE tb = CblasTrans;   // T (NT 形态)
+    int layout = CblasRowMajor;
+    enum CBLAS_TRANSPOSE ta = CblasNoTrans; // N
+    enum CBLAS_TRANSPOSE tb = CblasTrans;   // T (NT 形态)
 
     for (int i = 1; i < argc; ++i) {
-        if (!strcmp(argv[i], "--m")) m = atoi(argv[++i]);
-        else if (!strcmp(argv[i], "--n")) n = atoi(argv[++i]);
-        else if (!strcmp(argv[i], "--k")) k = atoi(argv[++i]);
-        else if (!strcmp(argv[i], "--repeats")) repeats = atoi(argv[++i]);
-        else if (!strcmp(argv[i], "--warmup")) warmup = atoi(argv[++i]);
+        if (i + 1 >= argc) { fprintf(stderr, "Missing value for %s\n", argv[i]); return 1; }
+        if (!strcmp(argv[i], "--m")) m = bench_int(argv[++i], 1);
+        else if (!strcmp(argv[i], "--n")) n = bench_int(argv[++i], 1);
+        else if (!strcmp(argv[i], "--k")) k = bench_int(argv[++i], 1);
+        else if (!strcmp(argv[i], "--repeats")) repeats = bench_int(argv[++i], 1);
+        else if (!strcmp(argv[i], "--warmup")) warmup = bench_int(argv[++i], 0);
         else if (!strcmp(argv[i], "--alpha")) alpha = atof(argv[++i]);
         else if (!strcmp(argv[i], "--beta"))  beta  = atof(argv[++i]);
         else if (!strcmp(argv[i], "--layout")) {
@@ -50,11 +53,15 @@ int main(int argc, char** argv) {
             else { fprintf(stderr, "Unknown layout %s\n", s); return 1; }
         }
         else if (!strcmp(argv[i], "--transA")) {
-            char c = argv[++i][0];
+            const char *value = argv[++i];
+            char c = value[0];
+            if (!value[0] || value[1] || !strchr("NnTt", c)) { fprintf(stderr, "Transpose must be N or T\n"); return 1; }
             ta = (c=='N'||c=='n')? CblasNoTrans : CblasTrans;
         }
         else if (!strcmp(argv[i], "--transB")) {
-            char c = argv[++i][0];
+            const char *value = argv[++i];
+            char c = value[0];
+            if (!value[0] || value[1] || !strchr("NnTt", c)) { fprintf(stderr, "Transpose must be N or T\n"); return 1; }
             tb = (c=='N'||c=='n')? CblasNoTrans : CblasTrans;
         }
         else {
@@ -80,14 +87,14 @@ int main(int argc, char** argv) {
     }
 
     size_t align = 64;
-    double* A = (double*)xaligned_alloc((size_t)a_rows*a_cols*sizeof(double), align);
-    double* B = (double*)xaligned_alloc((size_t)b_rows*b_cols*sizeof(double), align);
-    double* C = (double*)xaligned_alloc((size_t)m*n*sizeof(double), align);
+    double* A = (double*)xaligned_alloc(bench_elements(a_rows, a_cols)*sizeof(double), align);
+    double* B = (double*)xaligned_alloc(bench_elements(b_rows, b_cols)*sizeof(double), align);
+    double* C = (double*)xaligned_alloc(bench_elements(m, n)*sizeof(double), align);
     if (!A || !B || !C) { fprintf(stderr, "alloc failed\n"); return 1; }
 
     // 初始化
-    for (size_t i=0;i<(size_t)a_rows*a_cols;i++) A[i] = (double)((i%13)-6);
-    for (size_t i=0;i<(size_t)b_rows*b_cols;i++) B[i] = (double)((i%17)-8);
+    for (size_t i=0;i<(size_t)a_rows*a_cols;i++) A[i] = (double)((int)(i%13)-6);
+    for (size_t i=0;i<(size_t)b_rows*b_cols;i++) B[i] = (double)((int)(i%17)-8);
     for (size_t i=0;i<(size_t)m*n;i++) C[i] = 0.0;
 
     // 预热
@@ -98,7 +105,7 @@ int main(int argc, char** argv) {
     // 计时（取最短）
     double best = 1e100;
     for (int r=0; r<repeats; ++r) {
-        if (beta == 0.0) memset(C, 0, (size_t)m*n*sizeof(double));
+        if (beta == 0.0) memset(C, 0, bench_elements(m, n)*sizeof(double));
         double t0 = wall_time_sec();
         cblas_dgemm(layout, ta, tb, m, n, k, alpha, A, lda, B, ldb, beta, C, ldc);
         double t1 = wall_time_sec();

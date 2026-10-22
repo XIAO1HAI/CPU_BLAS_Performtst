@@ -1,34 +1,17 @@
-# # CC = gcc
-# # CFLAGS = -O3 -DNDEBUG -march=native -fopenmp -I$(BLIS_HOME)/include/blis
-# # LDFLAGS = -L$(BLIS_HOME)/lib -lblis -lm -lpthread
-# CC = gcc
-# C++ = g++
-# CFLAGS = -O3 -march=native -ffast-math -fopenmp
-# BLIS_INC     ?= /usr/local/include/blis
-# BLIS_LIB     ?= /usr/local/lib
-
-# all: dgemm_nt_bench_blis
-
-# # dgemm_nt_bench_blis: dgemm_nt_bench_blis.c
-# # 	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
-
-# blis: dgemm_nt_bench_blis.c
-# 	$(CC) $(CFLAGS) -I$(BLIS_INC) $< -L$(BLIS_LIB) -lblis -o dgemm_bench_blis $(LDFLAGS)
-
-# clean:
-# 	rm -f dgemm_nt_bench_blis
-
-
-
 CC = gcc
-CFLAGS  = -O3 -DNDEBUG -march=native -fopenmp \
-          -I$(BLIS_HOME)/include/blis -I$(BLIS_HOME)/include
-LDFLAGS = -L$(BLIS_HOME)/lib -Wl,-rpath,$(BLIS_HOME)/lib -lblis -lm -lpthread
-
-all: dgemm_nt_bench_blis
-
-dgemm_nt_bench_blis: dgemm_nt_bench_blis.c
-	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
-
+BLIS_HOME ?= /usr/local
+BLIS_INC ?= $(BLIS_HOME)/include/blis
+BLIS_LIB ?= $(BLIS_HOME)/lib
+BLIS_LDLIBS ?= -lblis
+CFLAGS ?= -O3 -march=native -fopenmp
+LDFLAGS ?= -L$(BLIS_LIB) -Wl,-rpath,$(BLIS_LIB)
+LDLIBS = $(BLIS_LDLIBS) -lm -lpthread -fopenmp
+.PHONY: all blis clean
+all: dgemm_nt_bench_blis dgemm_bench_blis
+blis: dgemm_bench_blis
+dgemm_nt_bench_blis: dgemm_nt_bench_blis.c ../../../../benchmark_args.h
+	$(CC) $(CFLAGS) -I$(BLIS_INC) $< -o $@ $(LDFLAGS) $(LDLIBS)
+dgemm_bench_blis: ../dgemm_bench.c ../../../../benchmark_args.h
+	$(CC) $(CFLAGS) -I$(BLIS_INC) $< -o $@ $(LDFLAGS) $(LDLIBS)
 clean:
-	rm -f dgemm_nt_bench_blis
+	rm -f dgemm_nt_bench_blis dgemm_bench_blis

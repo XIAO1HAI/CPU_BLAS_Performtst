@@ -1,0 +1,33 @@
+M,N,K,threads,precision,time_sec,GFLOPS
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+3456,83584,1920,36,dgemm,3.150126,352.128
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+3456,77440,1920,36,dgemm,2.918331,352.157
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+3456,78208,1920,36,dgemm,2.968570,349.630
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+3456,80512,1920,36,dgemm,3.042614,351.171
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+3456,45568,1920,36,dgemm,1.711690,353.297
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+3456,45184,1920,36,dgemm,1.712789,350.095
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+3456,37888,1920,36,dgemm,1.420156,354.055
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+12672,62464,1920,36,dgemm,8.533132,356.203
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+12672,73984,1920,36,dgemm,10.129636,355.402
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+12672,64000,1920,36,dgemm,8.787897,354.382
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+10368,77824,1920,36,dgemm,8.700963,356.100
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+10368,75904,1920,36,dgemm,8.548120,353.525
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+10368,80896,1920,36,dgemm,9.089346,354.340
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+8064,76288,1920,36,dgemm,6.702912,352.431
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+8064,74752,1920,36,dgemm,6.510979,355.515
+# omp_get_max_threads=36, OMP_NUM_THREADS=36
+8064,62424,1920,36,dgemm,5.476507,352.963

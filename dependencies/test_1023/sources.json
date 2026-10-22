@@ -7,31 +7,31 @@
       "path": "OpenBLAS",
       "remote": "https://gitee.com/xiao--hai/OpenBLAS.git",
       "commit": "aef36a3ff00842b09c0ef706c97d8fda10ef9584",
-      "patch": "dependencies/test_1023/patches/OpenBLAS.patch",
       "additional_files": [],
       "license_files": [
         "dependencies/test_1023/licenses/OpenBLAS/LICENSE"
-      ]
+      ],
+      "working_tree": "Use clean pinned checkout; transfer-only mode and symlink deltas discarded."
     },
     {
       "path": "blis",
       "remote": "https://gitee.com/xiao--hai/blis.git",
       "commit": "daa6e41ff2a6798bb4b5fa646a35f748bb8b0eae",
-      "patch": "dependencies/test_1023/patches/blis.patch",
       "additional_files": [],
       "license_files": [
         "dependencies/test_1023/licenses/blis/LICENSE"
-      ]
+      ],
+      "working_tree": "Use clean pinned checkout; transfer-only mode and symlink deltas discarded."
     },
     {
       "path": "libxsmm",
       "remote": "https://gitee.com/xiao--hai/libxsmm.git",
       "commit": "10b7dc82b3c46157e76eb40e4e959555f895b24d",
-      "patch": "dependencies/test_1023/patches/libxsmm.patch",
       "additional_files": [],
       "license_files": [
         "dependencies/test_1023/licenses/libxsmm/LICENSE.md"
-      ]
+      ],
+      "working_tree": "Use clean pinned checkout; transfer-only mode and symlink deltas discarded."
     }
   ]
 }

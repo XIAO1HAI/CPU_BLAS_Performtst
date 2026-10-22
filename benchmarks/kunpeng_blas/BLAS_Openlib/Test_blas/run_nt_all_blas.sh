@@ -48,7 +48,17 @@ SHAPES=(
   "384 83968 384"   # large-k
 )
 
-OUT="results_${LIB}_NT.csv"
+if [[ -n "${SHAPES_FILE:-}" ]]; then
+  mapfile -t SHAPES < <(awk -F, 'NF == 3 && $1 !~ /^[[:space:]]*#/ {print $1, $2, $3}' "$SHAPES_FILE")
+fi
+if (( ${#SHAPES[@]} == 0 )); then
+  echo "No shapes configured; set SHAPES_FILE to an M,N,K CSV." >&2
+  exit 1
+fi
+
+TRANSPOSE_TAG=NT
+[[ "$LIB" != "shalom" ]] || TRANSPOSE_TAG=NN
+OUT="${OUT:-results_${LIB}_${TRANSPOSE_TAG}_$(date +%Y%m%d_%H%M%S).csv}"
 echo "m,n,k,threads,gflops" > "$OUT"
 
 # 尝试用 numactl 绑到 NUMA 节点 0，如不存在则直接运行

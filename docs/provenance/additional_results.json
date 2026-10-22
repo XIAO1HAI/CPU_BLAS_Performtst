@@ -1,0 +1,319 @@
+[
+  {
+    "destination": "data/library_runs/amd_epyc_7663/blis_251111/blis_dgemm_20251209_202917.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "AMD-EPYC 7663/blis_251111/blis_dgemm_20251209_202917.csv",
+    "sha256": "78bba3fde60518d70c4a7e2a920ce8f4db3542e6c111b2edcf17790ffa9c2ab3",
+    "bytes": 4197,
+    "measurement_rows": 47
+  },
+  {
+    "destination": "data/library_runs/amd_epyc_7663/blis_251111/blis_dgemm_20251210_203523.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "AMD-EPYC 7663/blis_251111/blis_dgemm_20251210_203523.csv",
+    "sha256": "95ff54cc4edac0e32406934f473e7b129b24ba409a4705e3c29ca8bd53e84f43",
+    "bytes": 2080,
+    "measurement_rows": 24
+  },
+  {
+    "destination": "data/library_runs/amd_epyc_7663/libxsmm/libxsmm_dgemm_nt_20251209_205446.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "AMD-EPYC 7663/libxsmm/libxsmm_dgemm_nt_20251209_205446.csv",
+    "sha256": "966c724ff39c91e36973d86bb161a7567c4d5e68a906f29f31c5cead1457dfef",
+    "bytes": 1885,
+    "measurement_rows": 47
+  },
+  {
+    "destination": "data/library_runs/amd_epyc_7663/libxsmm/libxsmm_dgemm_nt_20251210_203834.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "AMD-EPYC 7663/libxsmm/libxsmm_dgemm_nt_20251210_203834.csv",
+    "sha256": "dfab0e17baac9fb40e08e4c0ce3d7a8bc89eb08f458b76545e5aba4c4c79ac38",
+    "bytes": 920,
+    "measurement_rows": 24
+  },
+  {
+    "destination": "data/library_runs/amd_epyc_7663/openblas/results_openblas_NT.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "AMD-EPYC 7663/openblas/results_openblas_NT.csv",
+    "sha256": "f731756e67d720a505493a5be2368bdfe81ec697f3032436a98b0810b9a6ca6c",
+    "bytes": 597,
+    "measurement_rows": 24
+  },
+  {
+    "destination": "data/library_runs/amd_epyc_7663/openblas/results_openblas_NT_384.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "AMD-EPYC 7663/openblas/results_openblas_NT_384.csv",
+    "sha256": "a78a97b94f5e865122bc727a6ad0218789f22f858a61c5935dc50e5e8d8c107e",
+    "bytes": 597,
+    "measurement_rows": 24
+  },
+  {
+    "destination": "data/library_runs/amd_epyc_7663/openblas/results_openblas_NT_k1920.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "AMD-EPYC 7663/openblas/results_openblas_NT_k1920.csv",
+    "sha256": "e1abf76d8e8fdfd7c76a05673ba2b4a2538b7691ecefe1e4b5a634fbed301316",
+    "bytes": 1301,
+    "measurement_rows": 47
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/openblas/results_openblas_NT_13440_36threads.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/Openblas/results_openblas_NT_13440_36threads.csv",
+    "sha256": "916b00cb4d5cf36da8add029137e6fc6e4a383a5f44f76ac9659c123c5b35ee0",
+    "bytes": 452,
+    "measurement_rows": 16
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/openblas/results_openblas_NT_24threads_avg.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/Openblas/results_openblas_NT_24threads_avg.csv",
+    "sha256": "b16f94bf1dce7184e6bc5a0c5d4a4d8008fbc5b67cc7408971d47f4519d6b5a6",
+    "bytes": 597,
+    "measurement_rows": 24
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/openblas/results_openblas_NT_2688_36threads.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/Openblas/results_openblas_NT_2688_36threads.csv",
+    "sha256": "0d7538f09b2b317d2eb31ed954263a465b991143ce125041800700a22123c50b",
+    "bytes": 411,
+    "measurement_rows": 15
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/openblas/results_openblas_NT_3456_36threads.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/Openblas/results_openblas_NT_3456_36threads.csv",
+    "sha256": "25980fc184ca7936a57f2c34afeac8c00c9648ee6a9928990fe886a7da373cc9",
+    "bytes": 443,
+    "measurement_rows": 16
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/openblas/results_openblas_NT_384_36threads.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/Openblas/results_openblas_NT_384_36threads.csv",
+    "sha256": "07536d9f183f49ae5029d228ae6d65a5d221c0b0c023cc16771a39f5f7fff689",
+    "bytes": 597,
+    "measurement_rows": 24
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/openblas/results_openblas_NT_48threads_avg.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/Openblas/results_openblas_NT_48threads_avg.csv",
+    "sha256": "15658282afdc78a9846ff5996c15cca83aab2cb78b5af40e7df34cbcc9861a54",
+    "bytes": 597,
+    "measurement_rows": 24
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/armpl_251111/armpl_dgemm_20251111_155850.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/armpl_251111/armpl_dgemm_20251111_155850.csv",
+    "sha256": "fe8dd4181d3b14962e0f18511d76a5db13b790222c2c84bb17359fc47580c01c",
+    "bytes": 1345,
+    "measurement_rows": 15
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/armpl_251111/armpl_dgemm_20251111_161035.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/armpl_251111/armpl_dgemm_20251111_161035.csv",
+    "sha256": "9bed993eed7ef4c33c818ab9d7950d69d9861747a0cbd172381dffc49a75760f",
+    "bytes": 1440,
+    "measurement_rows": 16
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/armpl_251111/armpl_dgemm_20251111_163119.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/armpl_251111/armpl_dgemm_20251111_163119.csv",
+    "sha256": "f89d95738d554eec06ffe7e7d72d01920a6eb81e8e7b1f62e9547c8d5d3fad2a",
+    "bytes": 1447,
+    "measurement_rows": 16
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/armpl_251111/armpl_dgemm_20251111_163910.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/armpl_251111/armpl_dgemm_20251111_163910.csv",
+    "sha256": "dab680c92c5296bdd0dff9c2bea7116241bc26dfa6894f2a5a835b4413e063bb",
+    "bytes": 2080,
+    "measurement_rows": 24
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/blis_251111/blis_dgemm_20251111_150510.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/blis_251111/blis_dgemm_20251111_150510.csv",
+    "sha256": "be40a2942cc3932e367dfd0496d5a43b6cb674bf062ee1ea1626e48f4c03d2ba",
+    "bytes": 1345,
+    "measurement_rows": 15
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/blis_251111/blis_dgemm_20251111_151308.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/blis_251111/blis_dgemm_20251111_151308.csv",
+    "sha256": "5dd10af0c767fdc7aee5780583ac8a04b73dd53836ed9c92fc22518b19fd072a",
+    "bytes": 1439,
+    "measurement_rows": 16
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/blis_251111/blis_dgemm_20251111_153134.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/blis_251111/blis_dgemm_20251111_153134.csv",
+    "sha256": "ad3d6364a9a1957378e1688d3d0b4ea1eedd32eb2e8545ad2e287270ba9d597b",
+    "bytes": 1447,
+    "measurement_rows": 16
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/blis_251111/blis_dgemm_20251111_154138.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/blis_251111/blis_dgemm_20251111_154138.csv",
+    "sha256": "3b31eb1cd7004363899bae5e6277b8e27fbc37f56bfe846fa9a124ca4efa8742",
+    "bytes": 2080,
+    "measurement_rows": 24
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/libxsmm/libxsmm_dgemm_nt_20251111_195923.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/libxsmm/libxsmm_dgemm_nt_20251111_195923.csv",
+    "sha256": "44518a8ed18a97303ab079046a96e2eecfc690c7e9ba025dade3b8dbc78b722a",
+    "bytes": 925,
+    "measurement_rows": 24
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/libxsmm/libxsmm_dgemm_nt_20251111_203312.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/libxsmm/libxsmm_dgemm_nt_20251111_203312.csv",
+    "sha256": "863dd01a818c0865d76974ca1570a985b1ecacf476448500fc18dc655456706f",
+    "bytes": 616,
+    "measurement_rows": 15
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/libxsmm/libxsmm_dgemm_nt_20251111_213822.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/libxsmm/libxsmm_dgemm_nt_20251111_213822.csv",
+    "sha256": "e15bd95fc2d362bb34a2b1bc52f1e3fd7dce95ad8a7b21f31b844d8819a8e705",
+    "bytes": 829,
+    "measurement_rows": 20
+  },
+  {
+    "destination": "data/library_runs/kp920_5250/libxsmm/libxsmm_dgemm_nt_20251112_095411.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-5250/libxsmm/libxsmm_dgemm_nt_20251112_095411.csv",
+    "sha256": "96ab78fb3fc5e8263e8fb77107ad1ff432d08bb8fddf390c07ca4051ffde9284",
+    "bytes": 671,
+    "measurement_rows": 16
+  },
+  {
+    "destination": "data/library_runs/kp920_7285z/armpl/armpl_dgemm_20251112_210900.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-7285Z/armpl/armpl_dgemm_20251112_210900.csv",
+    "sha256": "ecb26ef55970fd2580e7a343ea0d768a3be1bdecd16f27d245cbf744ab93b06e",
+    "bytes": 210,
+    "measurement_rows": 2
+  },
+  {
+    "destination": "data/library_runs/kp920_7285z/armpl/armpl_dgemm_20251112_211220.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-7285Z/armpl/armpl_dgemm_20251112_211220.csv",
+    "sha256": "9c2b894e010b0b4f5c48b415d0f597fbed64bbbadc5ffd8d487de2e51161ec89",
+    "bytes": 1230,
+    "measurement_rows": 14
+  },
+  {
+    "destination": "data/library_runs/kp920_7285z/armpl/armpl_dgemm_20251112_211430.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-7285Z/armpl/armpl_dgemm_20251112_211430.csv",
+    "sha256": "0e961f742484537ee40c9dcad304c253a2d6923dc4c8d7f500b56b7767a69f3e",
+    "bytes": 2776,
+    "measurement_rows": 32
+  },
+  {
+    "destination": "data/library_runs/kp920_7285z/armpl/armpl_dgemm_20251112_211709.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-7285Z/armpl/armpl_dgemm_20251112_211709.csv",
+    "sha256": "fb14832acaf98e26044397321bcfe33730573e922496492a9e1c0078a8542d60",
+    "bytes": 6190,
+    "measurement_rows": 71
+  },
+  {
+    "destination": "data/library_runs/kp920_7285z/blis/blis_dgemm_20251112_201101.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-7285Z/blis/blis_dgemm_20251112_201101.csv",
+    "sha256": "c1b0d0b8f1eef621f15eda9795e7101f94a0c0c738f8df93d54df85465ad1a5b",
+    "bytes": 6190,
+    "measurement_rows": 71
+  },
+  {
+    "destination": "data/library_runs/kp920_7285z/libxsmm/libxsmm_dgemm_nt_20251111_214648.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-7285Z/libxsmm/libxsmm_dgemm_nt_20251111_214648.csv",
+    "sha256": "7e674fa4dcabb00b041ddd09690497ffcb92669aa0696c98bdba51bc0163a187",
+    "bytes": 922,
+    "measurement_rows": 24
+  },
+  {
+    "destination": "data/library_runs/kp920_7285z/libxsmm/libxsmm_dgemm_nt_20251112_100332.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-7285Z/libxsmm/libxsmm_dgemm_nt_20251112_100332.csv",
+    "sha256": "e425d5df263f674f3b95b6570b4ca94f113c665317fe5e1392544dd77cae18f6",
+    "bytes": 1897,
+    "measurement_rows": 47
+  },
+  {
+    "destination": "data/library_runs/kp920_7285z/libxsmm/libxsmm_dgemm_nt_20251112_112338.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-7285Z/libxsmm/libxsmm_dgemm_nt_20251112_112338.csv",
+    "sha256": "1f5c88a8db1d91c1a12be6f37e2e9fd4a7b4480048043ad59f77b63e19d068b9",
+    "bytes": 922,
+    "measurement_rows": 24
+  },
+  {
+    "destination": "data/library_runs/kp920_7285z/openblas/results_openblas_NT.csv",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-7285Z/openblas/results_openblas_NT.csv",
+    "sha256": "e9e8608f68a885346dc3992fc90e82cc8af4a9b6a7e083833b13331f128bd4aa",
+    "bytes": 1887,
+    "measurement_rows": 71
+  },
+  {
+    "destination": "data/workbooks/k1920_kp920_f.xlsx",
+    "source_collection": "BLAS数学库-性能测试脚本",
+    "source": "KP920-F/k=1920实验结果.xlsx",
+    "sha256": "26e0af522a9cdb9ebc0c38ee6c9ee7e59fd667b40633156a2c770b9ba9c400f5",
+    "bytes": 36442
+  },
+  {
+    "destination": "data/experiment_exports/kp920_5250/results_openblas_NT_13440_36threads.csv",
+    "source_collection": "实验结果-数据",
+    "source": "KP920-5250/results_openblas_NT_13440_36threads.csv",
+    "sha256": "916b00cb4d5cf36da8add029137e6fc6e4a383a5f44f76ac9659c123c5b35ee0",
+    "bytes": 452,
+    "measurement_rows": 16
+  },
+  {
+    "destination": "data/experiment_exports/kp920_5250/results_openblas_NT_2688_36threads.csv",
+    "source_collection": "实验结果-数据",
+    "source": "KP920-5250/results_openblas_NT_2688_36threads.csv",
+    "sha256": "0d7538f09b2b317d2eb31ed954263a465b991143ce125041800700a22123c50b",
+    "bytes": 411,
+    "measurement_rows": 15
+  },
+  {
+    "destination": "data/experiment_exports/kp920_5250/results_openblas_NT_3456_36threads.csv",
+    "source_collection": "实验结果-数据",
+    "source": "KP920-5250/results_openblas_NT_3456_36threads.csv",
+    "sha256": "25980fc184ca7936a57f2c34afeac8c00c9648ee6a9928990fe886a7da373cc9",
+    "bytes": 443,
+    "measurement_rows": 16
+  },
+  {
+    "destination": "data/workbooks/k1920_amd_epyc_7663.xlsx",
+    "source_collection": "实验结果-数据",
+    "source": "k=1920实验结果-A2-AMD.xlsx",
+    "sha256": "f3b4346df3dfc6c37529d4f5e6174a64050d0549dc3e1b0b63e3f3d46b7bb945",
+    "bytes": 48522
+  },
+  {
+    "destination": "data/workbooks/k1920_comparison.xlsx",
+    "source_collection": "实验结果-数据",
+    "source": "k=1920实验结果-备份.xlsx",
+    "sha256": "1087df6df0e0b7a20d5e8c323c9f22896670759c1fce4b31b382d85014477f68",
+    "bytes": 151264
+  }
+]

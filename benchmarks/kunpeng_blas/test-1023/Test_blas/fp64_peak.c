@@ -1,4 +1,5 @@
 // fp64_peak.c : AArch64 NEON 合成峰值(FP64)
+#include "../../../benchmark_args.h"
 #include <arm_neon.h>
 #include <stdio.h>
 #include <stdint.h>
@@ -11,22 +12,25 @@ static inline double now_sec() {
 }
 
 int main(int argc, char** argv) {
-    uint64_t iters = (argc > 1) ? strtoull(argv[1], NULL, 10) : (uint64_t)24e8;
+    uint64_t iters = (argc > 1) ? bench_u64(argv[1], 1, UINT64_MAX) : (uint64_t)24e8;
 
     float64x2_t a0 = vdupq_n_f64(1.001), b0 = vdupq_n_f64(1.0001);
     float64x2_t a1 = vdupq_n_f64(0.999), b1 = vdupq_n_f64(0.9999);
 
     double t0 = now_sec();
     double sink = 0.0;
+    int T = 0;
 
     #pragma omp parallel reduction(+:sink)
     {
+        #pragma omp single
+        T = omp_get_num_threads();
         float64x2_t c0 = vdupq_n_f64(0.0),  c1 = c0,  c2 = c0,  c3 = c0;
         float64x2_t c4 = c0,  c5 = c0,  c6 = c0,  c7 = c0;
         float64x2_t c8 = c0,  c9 = c0, c10 = c0, c11 = c0;
         float64x2_t c12= c0, c13 = c0, c14 = c0, c15 = c0;
 
-        // 每轮 32 条 vfmaq_f64；每条 4 FLOPs => 每轮 128 FLOPs/线程
+        // 每轮 16 条 vfmaq_f64；每条 4 FLOPs => 每轮 64 FLOPs/线程
         for (uint64_t i = 0; i < iters; ++i) {
             c0  = vfmaq_f64(c0,  a0, b0);  c1  = vfmaq_f64(c1,  a1, b1);
             c2  = vfmaq_f64(c2,  a0, b0);  c3  = vfmaq_f64(c3,  a1, b1);
@@ -36,6 +40,9 @@ int main(int argc, char** argv) {
             c10 = vfmaq_f64(c10, a0, b0);  c11 = vfmaq_f64(c11, a1, b1);
             c12 = vfmaq_f64(c12, a0, b0);  c13 = vfmaq_f64(c13, a1, b1);
             c14 = vfmaq_f64(c14, a0, b0);  c15 = vfmaq_f64(c15, a1, b1);
+            // Keep independent accumulators from being merged by the optimizer.
+            __asm__ volatile("" : "+w"(c0), "+w"(c1), "+w"(c2), "+w"(c3), "+w"(c4), "+w"(c5), "+w"(c6), "+w"(c7));
+            __asm__ volatile("" : "+w"(c8), "+w"(c9), "+w"(c10), "+w"(c11), "+w"(c12), "+w"(c13), "+w"(c14), "+w"(c15));
         }
 
         float64x2_t sum0 = vaddq_f64(vaddq_f64(c0, c1),  vaddq_f64(c2, c3));
@@ -49,9 +56,8 @@ int main(int argc, char** argv) {
 
     double t1 = now_sec();
     double secs = t1 - t0;
-    int T = omp_get_max_threads();
 
-    double flops_per_iter_per_thr = 32.0 * 4.0; // 32 条 × 4 FLOPs
+    double flops_per_iter_per_thr = 16.0 * 4.0; // 16 FMA instructions × 2 lanes × 2 FLOPs
     double gflops = (flops_per_iter_per_thr * (double)iters * (double)T) / 1e9 / secs;
 
     printf("FP64 peak synthetic: threads=%d, iters=%llu, time=%.3f s, GFLOPS=%.1f (sink=%g)\n",

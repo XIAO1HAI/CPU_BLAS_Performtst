@@ -20,7 +20,7 @@ TARGET = armpl_bench_dgemm
 
 all: $(TARGET)
 $(TARGET): $(SRC)
-	$(CC) $(CFLAGS) $^ -o $@ $(ARMPL_LIB) $(LDFLAGS)
+	$(CC) $(CFLAGS) $< -o $@ $(ARMPL_LIB) $(LDFLAGS)
 
 clean:
 	rm -f $(TARGET) *.o

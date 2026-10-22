@@ -1,0 +1,114 @@
+{
+  "source_label": "test_1023",
+  "threads": 2,
+  "checks": [
+    {
+      "name": "second_openblas",
+      "source": "benchmarks/test_1023/Test_blas/openblas/dgemm_bench.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "m=32 n=48 k=16 layout=row transA=N transB=T time=0.000003 s  GFLOP/s=16.89",
+      "stderr": "",
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "second_openblas_legacy",
+      "source": "benchmarks/test_1023/Test_blas/1/dgemm_bench.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "m=32 n=48 k=16 layout=row transA=N transB=T time=0.000003 s  GFLOP/s=17.13",
+      "stderr": "",
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "second_blis",
+      "source": "benchmarks/test_1023/Test_blas/blis/blis_bench_dgemm.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "32,48,16,2,dgemm,0.000011,4.363",
+      "stderr": "# omp_get_max_threads=2, OMP_NUM_THREADS=2",
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "second_libxsmm",
+      "source": "benchmarks/test_1023/Test_blas/libxsmm/gemm_bench_libxsmm_nt.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "LIBXSMM dgemm NT  m=17 n=19 k=13 rep=2  time=0.000263 s  GFLOPS=0.06\nMax |C-Cref| = 2.220e-16",
+      "stderr": "",
+      "reference_check_passed": true,
+      "invalid_arguments_rejected": true,
+      "invalid_argument_exit_codes": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "second_neon",
+      "source": "benchmarks/test_1023/fp64_peak.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "FP64 peak synthetic: threads=2, iters=100000, time=0.000 s, GFLOPS=56.4 (sink=6.4e+06)",
+      "stderr": "",
+      "assembly_fmla_instructions": 16,
+      "two_threads_reported": true
+    },
+    {
+      "name": "second_sve",
+      "source": "benchmarks/test_1023/fp64_peak_sve.c",
+      "compiler": "gcc",
+      "compile_returncode": 0,
+      "compiler_output": "",
+      "run_returncode": 0,
+      "stdout": "SVE FP64 peak: VL=32B lanes=4, threads=2, time=0.001 s, GFLOPS=34.3 (sink=3.200e+06)",
+      "stderr": "",
+      "assembly_fmla_instructions": 16,
+      "two_threads_reported": true
+    },
+    {
+      "name": "make benchmarks/test_1023/Test_blas/openblas",
+      "compile_returncode": 0,
+      "compiler_output": "make: Warning: File 'Makefile' has modification time 69 s in the future\nmake: warning:  Clock skew detected.  Your build may be incomplete."
+    },
+    {
+      "name": "make benchmarks/test_1023/Test_blas/blis",
+      "compile_returncode": 0,
+      "compiler_output": "make: Warning: File 'Makefile' has modification time 69 s in the future\nmake: warning:  Clock skew detected.  Your build may be incomplete."
+    },
+    {
+      "name": "make benchmarks/test_1023/Test_blas/libxsmm",
+      "compile_returncode": 0,
+      "compiler_output": "make: Warning: File 'Makefile' has modification time 69 s in the future\nmake: warning:  Clock skew detected.  Your build may be incomplete."
+    }
+  ]
+}

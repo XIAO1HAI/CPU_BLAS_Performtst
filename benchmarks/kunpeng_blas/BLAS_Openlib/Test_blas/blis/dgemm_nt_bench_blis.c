@@ -1,4 +1,5 @@
 // dgemm_nt_bench_blis.c
+#include "../../../../benchmark_args.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -6,7 +7,7 @@
 #include <math.h>
 #include <string.h>
 // #include <cblas.h>   // 由 BLIS 提供的 CBLAS 兼容层（安装后自带 cblas.h）
-#include "blis/cblas.h"
+#include <cblas.h>
 
 // 高精度计时（Linux clock_gettime）
 static double now_sec() {
@@ -30,12 +31,12 @@ int main(int argc, char** argv) {
         fprintf(stderr, "Usage: %s M N K iters warmup_iters threads\n", argv[0]);
         return 1;
     }
-    const int M = atoi(argv[1]);
-    const int N = atoi(argv[2]);
-    const int K = atoi(argv[3]);
-    const int iters = atoi(argv[4]);
-    const int wup   = atoi(argv[5]);
-    const int threads = atoi(argv[6]); // BLIS_NUM_THREADS
+    const int M = bench_int(argv[1], 1);
+    const int N = bench_int(argv[2], 1);
+    const int K = bench_int(argv[3], 1);
+    const int iters = bench_int(argv[4], 1);
+    const int wup   = bench_int(argv[5], 0);
+    const int threads = bench_int(argv[6], 1); // BLIS_NUM_THREADS
 
     // 设置 BLIS 线程数（CBLAS 也走 BLIS 内核）
     setenv("BLIS_NUM_THREADS", argv[6], 1);
@@ -47,9 +48,9 @@ int main(int argc, char** argv) {
     const int ldc = M;  // C: M x N
 
     // 分配矩阵（列主序）
-    double* A = (double*) aligned_alloc(64, (size_t)M * K * sizeof(double));
-    double* B = (double*) aligned_alloc(64, (size_t)K * N * sizeof(double));
-    double* C = (double*) aligned_alloc(64, (size_t)M * N * sizeof(double));
+    double* A = (double*) bench_aligned_alloc(bench_elements(M, K) * sizeof(double));
+    double* B = (double*) bench_aligned_alloc(bench_elements(K, N) * sizeof(double));
+    double* C = (double*) bench_aligned_alloc(bench_elements(M, N) * sizeof(double));
     if (!A || !B || !C) { fprintf(stderr, "alloc failed\n"); return 2; }
 
     srand(0);
@@ -61,13 +62,13 @@ int main(int argc, char** argv) {
 
     // 预热
     for (int i = 0; i < wup; ++i) {
-        bli_dgemm(CblasColMajor, CblasNoTrans, CblasTrans,  // NT
+        cblas_dgemm(CblasColMajor, CblasNoTrans, CblasTrans,  // NT
                     M, N, K, alpha, A, lda, B, ldb, beta, C, ldc);
     }
 
     double t0 = now_sec();
     for (int i = 0; i < iters; ++i) {
-        bli_dgemm(CblasColMajor, CblasNoTrans, CblasTrans,  // NT
+        cblas_dgemm(CblasColMajor, CblasNoTrans, CblasTrans,  // NT
                     M, N, K, alpha, A, lda, B, ldb, beta, C, ldc);
     }
     double t1 = now_sec();
